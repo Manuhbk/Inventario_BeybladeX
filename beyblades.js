@@ -2499,7 +2499,7 @@ const BEYBLADES_DB = [
         blade: "PegasusBrushVariante", 
         assistBlade: "M", 
         ratchet: "6-60", 
-        bit: "V",
+        bit: "W",
         imgBlade: "imagenes/blades/UX/ux-18-03.png", 
         imgAssist: "imagenes/assist/M-1.png",
         imgRatchet: "imagenes/ratchet/3-85-ux18-03.png", 
@@ -3178,7 +3178,7 @@ const BEYBLADES_DB = [
     imgBit: "imagenes/bits/GU-3.png" 
 },
 { 
-    id: "CXI-17 Random Booster Vol. 10 01", 
+    id: "CXI-17 Random Booster Vol. 10 02", 
     linea: "CXI", 
     nombre: "UnicornDelta PO 1-80GR", 
     lockChip: "Unicorn", 
