@@ -1817,9 +1817,9 @@ const BEYBLADES_DB = [
     },
 
     { 
-        id: "UX-11", 
+        id: "UX-11 & Hasbro Drop Attack", 
         linea: "UX", 
-        nombre: "Starter ImpactDrake 9-60LR", 
+        nombre: "ImpactDrake 9-60LR", 
         blade: "ImpactDrake", 
         ratchet: "9-60", 
         bit: "LR",
