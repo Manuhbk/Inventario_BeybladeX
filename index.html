@@ -195,25 +195,47 @@
             box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
         }
 
-        /* === BUSCADOR === */
-        .search-box {
+        /* === GRID DE BUSCADORES MULTI-CAMPO === */
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 8px;
+            width: 100%;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+        }
+
+        .search-field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .search-field label {
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--accent-bx);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-left: 2px;
+        }
+
+        .search-field input {
             width: 100%;
             background-color: var(--bg-input);
             border: 1px solid var(--border-color);
-            padding: 14px 16px;
-            border-radius: 10px;
+            padding: 8px 10px;
+            border-radius: 8px;
             color: var(--text-primary);
-            font-size: 15px;
+            font-size: 12px;
             box-sizing: border-box;
-            margin-bottom: 25px;
             transition: all 0.2s ease;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .search-box:focus {
+        .search-field input:focus {
             outline: none;
             border-color: var(--accent-bx);
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(56, 189, 248, 0.25);
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
         }
 
         /* ========================================================
@@ -237,7 +259,6 @@
             border-color: rgba(56, 189, 248, 0.4);
         }
 
-        /* 🔥 CAMBIO CLAVE: Estructura vertical para que el título NUNCA se sobreponga */
         .bey-header {
             display: flex;
             flex-direction: column;
@@ -246,14 +267,13 @@
             gap: 12px;
         }
 
-        /* INFORMACIÓN DE LA TARJETA (ARRIBA) */
         .bey-info {
             display: flex;
             flex-direction: column;
             width: 100%;
             text-align: center;
             justify-content: center;
-            order: 1; /* Garantiza que va primero arriba */
+            order: 1;
         }
 
         .bey-tag {
@@ -276,14 +296,13 @@
             color: #ffffff;
         }
 
-        /* GRUPO DE CÍRCULOS (ABAJO DEL TÍTULO) */
         .circles-group {
             display: flex;
             gap: 8px;
             width: 100%;
             justify-content: center;
             flex-wrap: wrap;
-            order: 2; /* Garantiza que va después del título */
+            order: 2;
         }
 
         .circle {
@@ -316,7 +335,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Círculos optimizados para CXI en pantallas chicas */
         .grid-cxi {
             width: 100% !important;
             gap: 5px !important;   
@@ -439,7 +457,29 @@
             <div id="tab-obtenidos" class="tab tab-obtenidos" onclick="filtrarLinea('Obtenidos', this)">⭐ Mis Piezas Obtenidas</div>
         </div>
 
-        <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar por Blade, Ratchet o Bit..." oninput="filtrarBusqueda()">
+        <!-- === PANEL DE BÚSQUEDA MULTI-CAMPO COMPACTO === -->
+        <div class="search-grid">
+            <div class="search-field">
+                <label>Blades</label>
+                <input type="text" id="search-blade" placeholder="ej: Dran..." oninput="filtrarBusqueda()">
+            </div>
+            <div class="search-field">
+                <label>Ratchet</label>
+                <input type="text" id="search-ratchet" placeholder="ej: 3-60..." oninput="filtrarBusqueda()">
+            </div>
+            <div class="search-field">
+                <label>Bit</label>
+                <input type="text" id="search-bit" placeholder="ej: Rush..." oninput="filtrarBusqueda()">
+            </div>
+            <div class="search-field">
+                <label>Assist</label>
+                <input type="text" id="search-assist" placeholder="ej: Slash..." oninput="filtrarBusqueda()">
+            </div>
+            <div class="search-field">
+                <label>Lockchips / OB</label>
+                <input type="text" id="search-chip" placeholder="ej: Unicorn..." oninput="filtrarBusqueda()">
+            </div>
+        </div>
 
         <div id="beyblades-list"></div>
     </div>
@@ -527,49 +567,45 @@
             }
         }
 
+        function toggleComboStock(beyId) {
+            if (!piezasMarcadas[beyId]) {
+                piezasMarcadas[beyId] = { 
+                    blade: false, assist: false, ratchet: false, bit: false,
+                    lockChip: false, overBlade: false, metalBlade: false 
+                };
+            }
 
-// Function para marcar o desmarcar todas las piezas de un Beyblade al mismo tiempo
-function toggleComboStock(beyId) {
-    if (!piezasMarcadas[beyId]) {
-        piezasMarcadas[beyId] = { 
-            blade: false, assist: false, ratchet: false, bit: false,
-            lockChip: false, overBlade: false, metalBlade: false 
-        };
-    }
+            const marcas = piezasMarcadas[beyId];
+            const esCXI = beyId.startsWith('CXI');
 
-    const marcas = piezasMarcadas[beyId];
-    const esCXI = beyId.startsWith('CXI');
+            let todoMarcado = false;
+            if (esCXI) {
+                todoMarcado = marcas.lockChip && marcas.overBlade && marcas.metalBlade && marcas.assist && marcas.ratchet && marcas.bit;
+            } else {
+                todoMarcado = marcas.blade && marcas.ratchet && marcas.bit && (marcas.assist || true);
+            }
 
-    // Evaluamos si ya está todo marcado
-    let todoMarcado = false;
-    if (esCXI) {
-        todoMarcado = marcas.lockChip && marcas.overBlade && marcas.metalBlade && marcas.assist && marcas.ratchet && marcas.bit;
-    } else {
-        todoMarcado = marcas.blade && marcas.ratchet && marcas.bit && (marcas.assist || true);
-    }
+            const nuevoEstado = !todoMarcado;
 
-    const nuevoEstado = !todoMarcado;
+            if (esCXI) {
+                marcas.lockChip = nuevoEstado;
+                marcas.overBlade = nuevoEstado;
+                marcas.metalBlade = nuevoEstado;
+                marcas.assist = nuevoEstado;
+                marcas.ratchet = nuevoEstado;
+                marcas.bit = nuevoEstado;
+            } else {
+                marcas.blade = nuevoEstado;
+                marcas.assist = nuevoEstado;
+                marcas.ratchet = nuevoEstado;
+                marcas.bit = nuevoEstado;
+            }
 
-    if (esCXI) {
-        marcas.lockChip = nuevoEstado;
-        marcas.overBlade = nuevoEstado;
-        marcas.metalBlade = nuevoEstado;
-        marcas.assist = nuevoEstado;
-        marcas.ratchet = nuevoEstado;
-        marcas.bit = nuevoEstado;
-    } else {
-        marcas.blade = nuevoEstado;
-        marcas.assist = nuevoEstado;
-        marcas.ratchet = nuevoEstado;
-        marcas.bit = nuevoEstado;
-    }
-
-    localStorage.setItem('misPiezasX', JSON.stringify(piezasMarcadas));
-    calcularEstadisticas();
-    actualizarCirculos(beyId);
-    filtrarBusqueda();
-}
-
+            localStorage.setItem('misPiezasX', JSON.stringify(piezasMarcadas));
+            calcularEstadisticas();
+            actualizarCirculos(beyId);
+            filtrarBusqueda();
+        }
 
         function actualizarCirculos(beyId) {
             const marcas = piezasMarcadas[beyId] || { 
@@ -596,9 +632,7 @@ function toggleComboStock(beyId) {
             if(cMB) cMB.classList.toggle('active-MB', !!marcas.metalBlade);
         }
 
-        /* 🔥 CORRECCIÓN 1 Y 2: TOGGLE EN OBTENIDOS Y SEPARACIÓN EXACTA DE CX / CXI */
         function filtrarLinea(linea, elemento) {
-            // Si hace clic en "Obtenidos" estando YA en Obtenidos -> vuelve a "Todos" (Toggle)
             if (linea === 'Obtenidos' && filtroActual === 'Obtenidos') {
                 filtroActual = 'Todos';
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -612,72 +646,60 @@ function toggleComboStock(beyId) {
             filtrarBusqueda();
         }
 
-function filtrarBusqueda() {
-    const query = document.getElementById('search-input').value.toLowerCase().trim();
-    const lista = obtenerCatalogo();
-    
-    let filtrados = lista.filter(bey => {
-        const lineaBey = (bey.linea || 'BX').toUpperCase();
-        const filtro = filtroActual.toUpperCase();
+ function filtrarBusqueda() {
+            const qBlade = document.getElementById('search-blade').value.toLowerCase().trim();
+            const qRatchet = document.getElementById('search-ratchet').value.toLowerCase().trim();
+            const qBit = document.getElementById('search-bit').value.toLowerCase().trim();
+            const qAssist = document.getElementById('search-assist').value.toLowerCase().trim();
+            const qChip = document.getElementById('search-chip').value.toLowerCase().trim();
 
-        if (filtro === 'OBTENIDOS') {
-            const marcas = piezasMarcadas[bey.id];
-            if (!marcas) return false;
-            return marcas.blade || marcas.ratchet || marcas.bit || marcas.assist || 
-                   marcas.lockChip || marcas.overBlade || marcas.metalBlade;
+            const lista = obtenerCatalogo();
+            
+            let filtrados = lista.filter(bey => {
+                const lineaBey = (bey.linea || 'BX').toUpperCase();
+                const filtro = filtroActual.toUpperCase();
+
+                if (filtro === 'OBTENIDOS') {
+                    const marcas = piezasMarcadas[bey.id];
+                    if (!marcas) return false;
+                    return marcas.blade || marcas.ratchet || marcas.bit || marcas.assist || 
+                           marcas.lockChip || marcas.overBlade || marcas.metalBlade;
+                }
+
+                if (filtro === 'TODOS') return true;
+                return lineaBey === filtro;
+            });
+
+            // 🔍 FILTRADO MULTI-CAMPO FLEXIBLE Y PRECISO
+            filtrados = filtrados.filter(bey => {
+                const nombreBey = (bey.nombre || '').toLowerCase();
+                const idBey = (bey.id || '').toLowerCase();
+                const bladeBey = (bey.blade || '').toLowerCase();
+                const metalBlade = (bey.metalBlade || '').toLowerCase();
+                const ratchetBey = (bey.ratchet || '').toLowerCase();
+                const bitSigla = (bey.bit || '').toLowerCase();
+                const assistSigla = (bey.assistBlade || '').toLowerCase();
+                const lockChip = (bey.lockChip || '').toLowerCase();
+                const overBlade = (bey.overBlade || '').toLowerCase();
+
+                const nombreBitCompleto = DICCIONARIO_BITS[bey.bit] ? DICCIONARIO_BITS[bey.bit].toLowerCase() : '';
+                const nombreAssistCompleto = DICCIONARIO_ASSIST[bey.assistBlade] ? DICCIONARIO_ASSIST[bey.assistBlade].toLowerCase() : '';
+
+                // Búsquedas individuales por campo
+                const matchBlade = qBlade === '' || bladeBey.includes(qBlade) || metalBlade.includes(qBlade) || nombreBey.includes(qBlade) || idBey.includes(qBlade);
+                const matchRatchet = qRatchet === '' || ratchetBey.includes(qRatchet);
+                
+                // 🔥 COINCIDENCIA DE BIT: Revisa sigla exacta O coincidencia en nombre completo (ej: "F" o "Flat")
+                const matchBit = qBit === '' || bitSigla === qBit || nombreBitCompleto.includes(qBit);
+                
+                const matchAssist = qAssist === '' || assistSigla === qAssist || nombreAssistCompleto.includes(qAssist);
+                const matchChip = qChip === '' || lockChip.includes(qChip) || overBlade.includes(qChip);
+
+                return matchBlade && matchRatchet && matchBit && matchAssist && matchChip;
+            });
+
+            renderList(filtrados);
         }
-
-        if (filtro === 'TODOS') return true;
-        return lineaBey === filtro;
-    });
-
-    // 🔍 BÚSQUEDA INTELIGENTE POR PIEZA / TIPO DE PIEZA
-    if (query !== '') {
-        filtrados = filtrados.filter(bey => {
-            // Textos base del Beyblade
-            const nombreBey = (bey.nombre || '').toLowerCase();
-            const idBey = (bey.id || '').toLowerCase();
-            const bladeBey = (bey.blade || '').toLowerCase();
-            const ratchetBey = (bey.ratchet || '').toLowerCase();
-            const bitSigla = (bey.bit || '').toLowerCase();
-            const assistSigla = (bey.assistBlade || '').toLowerCase();
-            const lockChip = (bey.lockChip || '').toLowerCase();
-            const overBlade = (bey.overBlade || '').toLowerCase();
-            const metalBlade = (bey.metalBlade || '').toLowerCase();
-
-            // Nombres expandidos de los diccionarios
-            const nombreBitCompleto = DICCIONARIO_BITS[bey.bit] ? DICCIONARIO_BITS[bey.bit].toLowerCase() : '';
-            const nombreAssistCompleto = DICCIONARIO_ASSIST[bey.assistBlade] ? DICCIONARIO_ASSIST[bey.assistBlade].toLowerCase() : '';
-            const nombreMetalCompleto = DICCIONARIO_METAL[bey.metalBlade] ? DICCIONARIO_METAL[bey.metalBlade].toLowerCase() : '';
-            const nombreOverCompleto = DICCIONARIO_OVER[bey.overBlade] ? DICCIONARIO_OVER[bey.overBlade].toLowerCase() : '';
-
-            // 1. Coincidencias exactas o parciales por nombre de pieza
-            const coincidePieza = 
-                nombreBey.includes(query) || 
-                idBey.includes(query) || 
-                bladeBey.includes(query) ||
-                ratchetBey.includes(query) ||
-                bitSigla === query || 
-                nombreBitCompleto.includes(query) ||
-                nombreAssistCompleto.includes(query) ||
-                nombreMetalCompleto.includes(query) ||
-                nombreOverCompleto.includes(query) ||
-                lockChip.includes(query) ||
-                overBlade.includes(query) ||
-                metalBlade.includes(query);
-
-            // 2. Filtro por tipo de pieza genérico
-            if (query === 'ratchet' || query === 'ratchets') return ratchetBey !== '' && ratchetBey !== 'n/a' && ratchetBey !== 'n-a';
-            if (query === 'bit' || query === 'bits') return bitSigla !== '' && bitSigla !== 'n/a';
-            if (query === 'blade' || query === 'blades') return bladeBey !== '' || metalBlade !== '';
-            if (query === 'assist') return assistSigla !== '' && assistSigla !== 'n/a';
-
-            return coincidePieza;
-        });
-    }
-
-    renderList(filtrados);
-}
         
         function renderList(beysAFiltrar) {
             const container = document.getElementById('beyblades-list');
@@ -732,21 +754,20 @@ function filtrarBusqueda() {
 
                         <div class="checkbox-section">
                             <button onclick="toggleComboStock('${bey.id}')" style="
-    background: linear-gradient(135deg, var(--accent-bx), #0284c7);
-    color: #ffffff;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: 800;
-    font-size: 11px;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 6px rgba(56, 189, 248, 0.3);
-    width: 100%;
-">⚡ Combo Stock </button>
-
+                                background: linear-gradient(135deg, var(--accent-bx), #0284c7);
+                                color: #ffffff;
+                                border: none;
+                                padding: 6px 12px;
+                                border-radius: 6px;
+                                font-weight: 800;
+                                font-size: 11px;
+                                cursor: pointer;
+                                text-transform: uppercase;
+                                margin-bottom: 8px;
+                                letter-spacing: 0.5px;
+                                box-shadow: 0 2px 6px rgba(56, 189, 248, 0.3);
+                                width: 100%;
+                            ">⚡ Combo Stock </button>
 
                             <label class="check-item">
                                 <input type="checkbox" ${marcas.lockChip ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'lockChip')">
@@ -815,23 +836,21 @@ function filtrarBusqueda() {
                         </div>
 
                         <div class="checkbox-section">
-
                             <button onclick="toggleComboStock('${bey.id}')" style="
-    background: linear-gradient(135deg, var(--accent-bx), #0284c7);
-    color: #ffffff;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: 800;
-    font-size: 11px;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 6px rgba(56, 189, 248, 0.3);
-    width: 100%;
-">⚡ Combo Stock </button>
-
+                                background: linear-gradient(135deg, var(--accent-bx), #0284c7);
+                                color: #ffffff;
+                                border: none;
+                                padding: 6px 12px;
+                                border-radius: 6px;
+                                font-weight: 800;
+                                font-size: 11px;
+                                cursor: pointer;
+                                text-transform: uppercase;
+                                margin-bottom: 8px;
+                                letter-spacing: 0.5px;
+                                box-shadow: 0 2px 6px rgba(56, 189, 248, 0.3);
+                                width: 100%;
+                            ">⚡ Combo Stock </button>
 
                             <label class="check-item">
                                 <input type="checkbox" ${marcas.blade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'blade')">

@@ -9,7 +9,7 @@ const BEYBLADES_DB = [
                 nombre: "DranSword 3-60F", 
                 blade: "DranSword", 
                 ratchet: "3-60", 
-                bit: "Flat (F)",
+                bit: "F",
                 // Rutas locales de tu PC preparadas para el navegador:
                 imgBlade: "imagenes/blades/bx1.png", 
                 imgRatchet: "imagenes/ratchet/3-60-azul.png", 
@@ -87,7 +87,7 @@ const BEYBLADES_DB = [
                 nombre: "DranSword 3-60F Special Version", 
                 blade: "DranSword", 
                 ratchet: "3-60", 
-                bit: "Flat (F)",
+                bit: "F",
                 // Rutas locales de tu PC preparadas para el navegador:
                 imgBlade: "imagenes/blades/bx07.png", 
                 imgRatchet: "imagenes/ratchet/3-60-bx07.png", 
@@ -1393,17 +1393,6 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/P-4.png" 
     },
 
-               { 
-        id: "Hasbro - Beyblade X Dual Pack", 
-        linea: "BX", 
-        nombre: "DranSword 3-80B Negro", 
-        blade: "DranSword", 
-        ratchet: "3-80", 
-        bit: "B",
-        imgBlade: "imagenes/blades/drannegro.png", 
-        imgRatchet: "imagenes/ratchet/3-80-blanca.png", 
-        imgBit: "imagenes/bits/B-4.png" 
-    },
 
 
    { 
