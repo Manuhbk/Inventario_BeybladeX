@@ -527,6 +527,50 @@
             }
         }
 
+
+// Function para marcar o desmarcar todas las piezas de un Beyblade al mismo tiempo
+function toggleComboStock(beyId) {
+    if (!piezasMarcadas[beyId]) {
+        piezasMarcadas[beyId] = { 
+            blade: false, assist: false, ratchet: false, bit: false,
+            lockChip: false, overBlade: false, metalBlade: false 
+        };
+    }
+
+    const marcas = piezasMarcadas[beyId];
+    const esCXI = beyId.startsWith('CXI');
+
+    // Evaluamos si ya está todo marcado
+    let todoMarcado = false;
+    if (esCXI) {
+        todoMarcado = marcas.lockChip && marcas.overBlade && marcas.metalBlade && marcas.assist && marcas.ratchet && marcas.bit;
+    } else {
+        todoMarcado = marcas.blade && marcas.ratchet && marcas.bit && (marcas.assist || true);
+    }
+
+    const nuevoEstado = !todoMarcado;
+
+    if (esCXI) {
+        marcas.lockChip = nuevoEstado;
+        marcas.overBlade = nuevoEstado;
+        marcas.metalBlade = nuevoEstado;
+        marcas.assist = nuevoEstado;
+        marcas.ratchet = nuevoEstado;
+        marcas.bit = nuevoEstado;
+    } else {
+        marcas.blade = nuevoEstado;
+        marcas.assist = nuevoEstado;
+        marcas.ratchet = nuevoEstado;
+        marcas.bit = nuevoEstado;
+    }
+
+    localStorage.setItem('misPiezasX', JSON.stringify(piezasMarcadas));
+    calcularEstadisticas();
+    actualizarCirculos(beyId);
+    filtrarBusqueda();
+}
+
+
         function actualizarCirculos(beyId) {
             const marcas = piezasMarcadas[beyId] || { 
                 blade: false, assist: false, ratchet: false, bit: false, 
@@ -669,6 +713,23 @@
                         </div>
 
                         <div class="checkbox-section">
+                            <button onclick="toggleComboStock('${bey.id}')" style="
+    background: linear-gradient(135deg, var(--accent-bx), #0284c7);
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 11px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(56, 189, 248, 0.3);
+    width: 100%;
+">⚡ Marca Combo Stock (Todas las piezas)</button>
+
+
                             <label class="check-item">
                                 <input type="checkbox" ${marcas.lockChip ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'lockChip')">
                                 <span><span class="label-LC" style="color: #ffb703; font-weight: bold;">LC:</span> ${bey.lockChip || 'N/A'}</span>
@@ -736,6 +797,24 @@
                         </div>
 
                         <div class="checkbox-section">
+
+                            <button onclick="toggleComboStock('${bey.id}')" style="
+    background: linear-gradient(135deg, var(--accent-bx), #0284c7);
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 11px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(56, 189, 248, 0.3);
+    width: 100%;
+">⚡ Marca Combo Stock (Todas las piezas)</button>
+
+
                             <label class="check-item">
                                 <input type="checkbox" ${marcas.blade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'blade')">
                                 <span><span class="label-B">B:</span> ${bey.blade || 'N/A'}</span>
@@ -769,7 +848,7 @@
                 document.getElementById('beyblades-list').innerHTML = 
                     '<p style="color: var(--text-secondary); text-align:center; padding:20px;">Error al cargar beyblades.js o base de datos vacía.</p>';
             }
-            
+
         });
     </script>
 </body>
