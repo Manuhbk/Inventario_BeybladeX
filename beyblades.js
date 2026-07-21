@@ -3017,7 +3017,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "CX-00 Hasbro Japan Starter", 
+        id: "CX-00 Rare Bey Get Campaign", 
         linea: "CX", 
         nombre: "Bucks Antlers B 2-60D Metal Coat: Orange", 
         blade: "BucksAntlers", 
@@ -3032,7 +3032,7 @@ const BEYBLADES_DB = [
 
 
             { 
-        id: "CX-00 Hasbro Japan Starter", 
+        id: "CX-00 Rare Bey Get Campaign", 
         linea: "CX", 
         nombre: "Kraken Wriggle S 3-70O Metal Coat: Blue", 
         blade: "KrakenWriggle", 
@@ -3047,7 +3047,7 @@ const BEYBLADES_DB = [
 
 
             { 
-        id: "CX-00 Hasbro Japan Starter", 
+        id: "CX-00 Rare Bey Get Campaign", 
         linea: "CX", 
         nombre: "Hornet Fort R 7-60T Metal Coat: Yellow", 
         blade: "HornetFort", 
