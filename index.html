@@ -33,7 +33,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Fondo con sutil gradiente marino y textura de líneas de estadio X */
             background-image: 
                 radial-gradient(circle at 50% 0%, #102a45 0%, #060b13 70%),
                 linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
@@ -45,7 +44,7 @@
             max-width: 680px;
         }
 
-        /* === CONTENEDOR Y ESTILO DEL LOGO === */
+        /* === LOGO === */
         .logo-wrapper {
             display: flex;
             justify-content: center;
@@ -70,7 +69,7 @@
             box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
         }
 
-        /* === TÍTULO PRINCIPAL ESTILO LIGA === */
+        /* === TÍTULO PRINCIPAL === */
         h1 {
             font-size: 28px;
             font-weight: 900;
@@ -80,11 +79,8 @@
             margin-bottom: 5px;
             text-align: center;
             background: linear-gradient(135deg, #ffffff 30%, var(--accent-bx));
-            
-            /* REEMPLAZA O AGREGA ESTAS DOS LÍNEAS AQUÍ: */
             -webkit-background-clip: text;
-            background-clip: text; /* <--- Esta es la línea estándar que te pide */
-            
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
         }
@@ -100,9 +96,7 @@
             text-transform: uppercase;
         }
 
-        /* ========================================================
-           PANEL DE ESTADÍSTICAS RADICAL (Efecto Cristal de Arena)
-           ======================================================== */
+        /* === PANEL ESTADÍSTICAS === */
         .stats-panel {
             background: linear-gradient(135deg, rgba(15, 28, 48, 0.85), rgba(6, 11, 19, 0.95));
             border: 1px solid var(--border-color);
@@ -130,7 +124,7 @@
         }
 
         .stats-panel > div > p {
-            color: var(--accent-ux) !important; /* Dorado Arena de Playa */
+            color: var(--accent-ux) !important;
             font-size: 42px !important; 
             font-weight: 900 !important;
             line-height: 1 !important;
@@ -148,47 +142,42 @@
 
         .max-total {
             font-size: 15px !important;
-            color: #64748b !important; /* Gris oleaje suave */
+            color: #64748b !important;
             font-weight: 600 !important;
             text-shadow: none !important;
             margin-left: 5px !important;
         }
 
-  /* === TABS / FILTROS (Botones con look de engranaje deportivo) === */
+        /* === TABS / FILTROS === */
         .tabs {
             display: flex;
             gap: 8px; 
             margin-bottom: 20px;
             width: 100%;
-            padding: 4px 2px 10px 2px; /* Espaciado extra para que la sombra del botón activo no se corte */
-            overflow-x: auto;          /* 🔄 Permite el deslizamiento horizontal si no caben */
+            padding: 4px 2px 10px 2px;
+            overflow-x: auto;
             scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch; /* Scroll ultra suave en celulares */
+            -webkit-overflow-scrolling: touch;
             box-sizing: border-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        /* Oculta la barra de scroll fea en navegadores modernos para mantener el look premium */
-        .tabs::-webkit-scrollbar {
-            display: none; 
-        }
-        .tabs {
-            -ms-overflow-style: none;  /* IE y Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
+        .tabs::-webkit-scrollbar { display: none; }
 
         .tab {
             background-color: var(--bg-card);
             color: var(--text-secondary);
             border: 1px solid var(--border-color);
-            padding: 10px 14px; /* Un pelito más compacto para que entren más Beys de golpe */
+            padding: 10px 14px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 11.5px; /* Calibrado para alta legibilidad en pantallas chicas */
+            font-size: 11.5px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             white-space: nowrap;
-            flex-shrink: 0; /* 🔄 Evita que los botones se aplasten o se deformen al achicar la pantalla */
+            flex-shrink: 0;
             transition: all 0.2s ease-in-out;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
         }
@@ -206,7 +195,7 @@
             box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
         }
 
-        /* === BUSCADOR RADICAL === */
+        /* === BUSCADOR === */
         .search-box {
             width: 100%;
             background-color: var(--bg-input);
@@ -224,13 +213,11 @@
         .search-box:focus {
             outline: none;
             border-color: var(--accent-bx);
-            box-shadow: 
-                inset 0 2px 4px rgba(0,0,0,0.3),
-                0 0 10px rgba(56, 189, 248, 0.25);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(56, 189, 248, 0.25);
         }
 
         /* ========================================================
-           TARJETAS BEYBLADE (Look de Contenedor de Alta Tecnología)
+           TARJETAS BEYBLADE CON CORRECCIÓN DE REORDENAMIENTO VERTICAL
            ======================================================== */
         .bey-card {
             background: linear-gradient(145deg, var(--bg-card), #0b1424);
@@ -250,89 +237,23 @@
             border-color: rgba(56, 189, 248, 0.4);
         }
 
+        /* 🔥 CAMBIO CLAVE: Estructura vertical para que el título NUNCA se sobreponga */
         .bey-header {
             display: flex;
+            flex-direction: column;
             align-items: center;
             width: 100%;
+            gap: 12px;
         }
 
-        /* GRUPO DE CÍRCULOS (Efecto de Encastre de Piezas) */
-        .circles-group {
-            display: flex;
-            gap: 8px;
-            width: 65%;
-            justify-content: flex-start;
-        }
-
-        .circle {
-            width: 68px; 
-            height: 68px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #15253f 60%, #0b1424 100%);
-            border: 2px solid #233d66;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            flex-shrink: 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Brillo de Activación Neon al Marcar Piezas */
-        .circle.active-B { border-color: var(--accent-ux); box-shadow: 0 0 12px rgba(251, 191, 36, 0.4); }   
-        .circle.active-As { border-color: var(--accent-cx); box-shadow: 0 0 12px rgba(45, 212, 191, 0.4); }          
-        .circle.active-R { border-color: #4ade80; box-shadow: 0 0 12px rgba(74, 222, 128, 0.4); }          
-        .circle.active-Bi { border-color: var(--accent-bx); box-shadow: 0 0 12px rgba(56, 189, 248, 0.4); } 
-
-        /* Clases de iluminación extras para los círculos de la línea CXI */
-        .circle.active-LC { border-color: #ffb703; box-shadow: 0 0 12px rgba(255, 183, 3, 0.4); }
-        .circle.active-OB { border-color: #ff007f; box-shadow: 0 0 12px rgba(255, 0, 127, 0.4); }
-        .circle.active-MB { border-color: #e0aaff; box-shadow: 0 0 12px rgba(224, 170, 255, 0.4); }
-
-        .circle img {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-
-/* ========================================================
-           💥 OPTIMIZACIÓN EXCLUSIVA PARA LOS 6 CÍRCULOS CXI (60px)
-           ======================================================== */
-        .grid-cxi {
-            width: 65% !important; /* Terreno ideal para tus 6 círculos de 60px */
-            gap: 6px !important;   
-        }
-
-        .grid-cxi .circle {
-            width: 60px !important;  
-            height: 60px !important;
-        }
-
-        /* Le damos el 35% restante al bloque de información */
-        .line-cxi .bey-info {
-            width: 35% !important;
-        }
-
-        .line-cxi .bey-name {
-            font-size: 16px !important; 
-            white-space: normal !important;       /* 🔄 PERMITE que el texto continúe abajo */
-            word-wrap: break-word !important;     /* Rompe de forma segura si encuentra una palabra gigante */
-            overflow-wrap: break-word !important; /* Refuerza el quiebre para que no se salga del contenedor */
-        }
-
-        
-        .bey-card:hover .circle img {
-            transform: rotate(5deg) scale(1.03);
-        }
-
-        /* INFORMACIÓN DE LA TARJETA */
+        /* INFORMACIÓN DE LA TARJETA (ARRIBA) */
         .bey-info {
             display: flex;
             flex-direction: column;
-            width: 35%;
-            text-align: right;
+            width: 100%;
+            text-align: center;
             justify-content: center;
+            order: 1; /* Garantiza que va primero arriba */
         }
 
         .bey-tag {
@@ -347,7 +268,7 @@
         .tag-CX, .tag-CXI { color: var(--accent-cx); }
 
         .bey-name {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 800;
             margin: 0;
             line-height: 1.2;
@@ -355,9 +276,63 @@
             color: #ffffff;
         }
 
-        /* ========================================================
-           SECCIÓN DE CHECKBOXES (Paneles de Control de Piezas)
-           ======================================================== */
+        /* GRUPO DE CÍRCULOS (ABAJO DEL TÍTULO) */
+        .circles-group {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            order: 2; /* Garantiza que va después del título */
+        }
+
+        .circle {
+            width: 60px; 
+            height: 60px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #15253f 60%, #0b1424 100%);
+            border: 2px solid #233d66;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .circle.active-B { border-color: var(--accent-ux); box-shadow: 0 0 12px rgba(251, 191, 36, 0.4); }   
+        .circle.active-As { border-color: var(--accent-cx); box-shadow: 0 0 12px rgba(45, 212, 191, 0.4); }          
+        .circle.active-R { border-color: #4ade80; box-shadow: 0 0 12px rgba(74, 222, 128, 0.4); }          
+        .circle.active-Bi { border-color: var(--accent-bx); box-shadow: 0 0 12px rgba(56, 189, 248, 0.4); } 
+
+        .circle.active-LC { border-color: #ffb703; box-shadow: 0 0 12px rgba(255, 183, 3, 0.4); }
+        .circle.active-OB { border-color: #ff007f; box-shadow: 0 0 12px rgba(255, 0, 127, 0.4); }
+        .circle.active-MB { border-color: #e0aaff; box-shadow: 0 0 12px rgba(224, 170, 255, 0.4); }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* Círculos optimizados para CXI en pantallas chicas */
+        .grid-cxi {
+            width: 100% !important;
+            gap: 5px !important;   
+            justify-content: center !important;
+        }
+
+        .grid-cxi .circle {
+            width: 52px !important;  
+            height: 52px !important;
+        }
+
+        .bey-card:hover .circle img {
+            transform: rotate(5deg) scale(1.03);
+        }
+
+        /* CHECKBOXES */
         .checkbox-section {
             background-color: rgba(6, 11, 19, 0.6);
             border: 1px solid rgba(30, 58, 95, 0.5);
@@ -378,9 +353,7 @@
             color: #e2e8f0;
             transition: color 0.15s ease;
         }
-        .check-item:hover {
-            color: #ffffff;
-        }
+        .check-item:hover { color: #ffffff; }
 
         .check-item input {
             cursor: pointer;
@@ -397,22 +370,12 @@
             word-break: break-word; 
         }
 
-        /* Colores de las etiquetas de piezas */
         .label-B { color: var(--accent-ux); font-weight: 700; }
         .label-As { color: var(--accent-cx); font-weight: 700; }
         .label-R { color: #4ade80; font-weight: 700; }
         .label-Bi { color: var(--accent-bx); font-weight: 700; }
 
-        /* Barra de scroll de categorías en móviles */
-        .tabs::-webkit-scrollbar {
-            height: 4px;
-        }
-        .tabs::-webkit-scrollbar-thumb {
-            background: var(--border-color);
-            border-radius: 10px;
-        }
-
-/* Estilos para el botón de Obtenidos independiente */
+        /* Botón de Obtenidos */
         .tab-obtenidos-wrapper {
             width: 100%;
             display: flex;
@@ -422,29 +385,26 @@
         }
 
         .tab.tab-obtenidos {
-            width: 100%;                  /* Ocupa el mismo ancho del buscador */
+            width: 100%;
             text-align: center;
             padding: 12px;
-            font-size: 13px;              /* Un pelito más grande para destacar */
-            border-color: var(--accent-ux); /* Borde dorado de tu paleta Unique Line */
+            font-size: 13px;
+            border-color: var(--accent-ux);
             background-color: rgba(15, 28, 48, 0.4);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        /* Efecto cuando marcas "Mis Piezas Obtenidas" como activo */
         .tab.tab-obtenidos.active {
             background: linear-gradient(135deg, var(--accent-ux), #d97706);
             color: #060b13;
             border-color: #ffffff;
             box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
         }
-
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- === LOGO OFICIAL DE LA COMUNIDAD === -->
         <div class="logo-wrapper">
             <img src="LOGO.jpg" alt="Beyblade Litoral Logo" class="community-logo">
         </div>
@@ -465,23 +425,18 @@
                 <h3>Bits</h3>
                 <p id="stat-bits">0</p>
             </div>
-
-
-
         </div>
 
         <div class="tabs">
-            <div class="tab active" onclick="filtrarLinea('Todos', this)">Todos</div>
+            <div id="tab-todos" class="tab active" onclick="filtrarLinea('Todos', this)">Todos</div>
             <div class="tab" onclick="filtrarLinea('BX', this)">Basic Line (BX-I)</div>
             <div class="tab" onclick="filtrarLinea('UX', this)">Unique Line (UX-I)</div>
             <div class="tab" onclick="filtrarLinea('CX', this)">Custom Line (CX)</div>
             <div class="tab" onclick="filtrarLinea('CXI', this)">Infinite Line (CXI)</div> 
         </div>
 
-        <!-- 🌟 Botón de acceso rápido exclusivo para tu colección -->
         <div class="tab-obtenidos-wrapper">
-            <div class="tab tab-obtenidos" onclick="filtrarLinea('Obtenidos', this)">⭐ Mis Piezas Obtenidas</div>
-        
+            <div id="tab-obtenidos" class="tab tab-obtenidos" onclick="filtrarLinea('Obtenidos', this)">⭐ Mis Piezas Obtenidas</div>
         </div>
 
         <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar por Blade, Ratchet o Bit..." oninput="filtrarBusqueda()">
@@ -495,7 +450,6 @@
         let piezasMarcadas = JSON.parse(localStorage.getItem('misPiezasX')) || {};
         let filtroActual = 'Todos';
 
-        // DICCIONARIOS DE DEFINICIONES DE PIEZAS
         const DICCIONARIO_BITS = {
             "I": "Ignition", "WW": "Wall Wedge", "Nr": "Narrow",
             "F": "Flat", "T": "Taper", "B": "Ball", "N": "Needle", "HN": "High Needle",
@@ -527,7 +481,6 @@
             return typeof BEYBLADES_DB !== 'undefined' ? BEYBLADES_DB : [];
         }
 
-        // === CALCULAR ESTADÍSTICAS COMPLETO ===
         function calcularEstadisticas() {
             let totalBlades = 0;
             let totalRatchets = 0;
@@ -540,7 +493,6 @@
                 const marcas = piezasMarcadas[bey.id];
                 if (!marcas) return;
 
-                // Para CXI, consideramos la Blade obtenida si tiene el Metal Blade marcado
                 if (bey.linea === 'CXI') {
                     if (marcas.metalBlade) totalBlades++;
                 } else {
@@ -559,13 +511,8 @@
         function togglePieza(beyId, tipo) {
             if (!piezasMarcadas[beyId]) {
                 piezasMarcadas[beyId] = { 
-                    blade: false, 
-                    assist: false, 
-                    ratchet: false, 
-                    bit: false,
-                    lockChip: false,  
-                    overBlade: false, 
-                    metalBlade: false 
+                    blade: false, assist: false, ratchet: false, bit: false,
+                    lockChip: false, overBlade: false, metalBlade: false 
                 };
             }
             
@@ -575,7 +522,6 @@
             calcularEstadisticas();
             actualizarCirculos(beyId);
 
-            // Si estamos en la pestaña obtenidos y desmarcas todo, actualiza la interfaz
             if (filtroActual === 'Obtenidos') {
                 filtrarBusqueda();
             }
@@ -596,43 +542,29 @@
             const cOB = document.getElementById(`circle-OB-${beyId}`);
             const cMB = document.getElementById(`circle-MB-${beyId}`);
             
-            if(cB) {
-                if(marcas.blade) cB.classList.add('active-B');
-                else cB.classList.remove('active-B');
-            }
-            if(cAs) {
-                if(marcas.assist) cAs.classList.add('active-As');
-                else cAs.classList.remove('active-As');
-            }
-            if(cR) {
-                if(marcas.ratchet) cR.classList.add('active-R');
-                else cR.classList.remove('active-R');
-            }
-            if(cBi) {
-                if(marcas.bit) cBi.classList.add('active-Bi');
-                else cBi.classList.remove('active-Bi');
-            }
+            if(cB) cB.classList.toggle('active-B', !!marcas.blade);
+            if(cAs) cAs.classList.toggle('active-As', !!marcas.assist);
+            if(cR) cR.classList.toggle('active-R', !!marcas.ratchet);
+            if(cBi) cBi.classList.toggle('active-Bi', !!marcas.bit);
             
-            if(cLC) {
-                if(marcas.lockChip) cLC.classList.add('active-LC'); 
-                else cLC.classList.remove('active-LC');
-            }
-            if(cOB) {
-                if(marcas.overBlade) cOB.classList.add('active-OB');
-                else cOB.classList.remove('active-OB');
-            }
-            if(cMB) {
-                if(marcas.metalBlade) cMB.classList.add('active-MB');
-                else cMB.classList.remove('active-MB');
-            }
+            if(cLC) cLC.classList.toggle('active-LC', !!marcas.lockChip);
+            if(cOB) cOB.classList.toggle('active-OB', !!marcas.overBlade);
+            if(cMB) cMB.classList.toggle('active-MB', !!marcas.metalBlade);
         }
 
+        /* 🔥 CORRECCIÓN 1 Y 2: TOGGLE EN OBTENIDOS Y SEPARACIÓN EXACTA DE CX / CXI */
         function filtrarLinea(linea, elemento) {
-            filtroActual = linea;
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            if (elemento) {
-                elemento.classList.add('active');
+            // Si hace clic en "Obtenidos" estando YA en Obtenidos -> vuelve a "Todos" (Toggle)
+            if (linea === 'Obtenidos' && filtroActual === 'Obtenidos') {
+                filtroActual = 'Todos';
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.getElementById('tab-todos').classList.add('active');
+            } else {
+                filtroActual = linea;
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                if (elemento) elemento.classList.add('active');
             }
+            
             filtrarBusqueda();
         }
 
@@ -647,14 +579,14 @@
                 if (filtro === 'OBTENIDOS') {
                     const marcas = piezasMarcadas[bey.id];
                     if (!marcas) return false;
-                    
                     return marcas.blade || marcas.ratchet || marcas.bit || marcas.assist || 
                            marcas.lockChip || marcas.overBlade || marcas.metalBlade;
                 }
 
-                return (filtro === 'TODOS') || 
-                       (filtro === 'CX' && (lineaBey === 'CX' || lineaBey === 'CXI')) || 
-                       (lineaBey === filtro);
+                if (filtro === 'TODOS') return true;
+                
+                // ✅ COMPARACIÓN EXACTA: CX solo muestra CX, CXI solo muestra CXI
+                return lineaBey === filtro;
             });
 
             if (query !== '') {
@@ -690,7 +622,7 @@
             container.innerHTML = '';
 
             if (beysAFiltrar.length === 0) {
-                container.innerHTML = '<p style="color: var(--text-secondary); text-align:center; padding:20px;">No se encontraron Beyblades en esta línea.</p>';
+                container.innerHTML = '<p style="color: var(--text-secondary); text-align:center; padding:20px;">No se encontraron Beyblades en esta categoría.</p>';
                 return;
             }
 
@@ -711,9 +643,7 @@
                 card.className = `bey-card line-${lineaSegura.toLowerCase()}`;
                 card.id = `card-${bey.id}`;
 
-                // ==========================================================
-                // 🔥 CASO EXCLUSIVO: LÍNEA CXI (INFINITE LINE) - 6 PIEZAS
-                // ==========================================================
+                // === LÍNEA CXI (INFINITE LINE) ===
                 if (lineaSegura === 'CXI') {
                     const imgLC = bey.imgLockChip ? `<img src="${bey.imgLockChip}" style="object-fit: cover;">` : '-';
                     const imgOB = bey.imgOverBlade ? `<img src="${bey.imgOverBlade}" style="object-fit: cover;">` : '-';
@@ -724,6 +654,10 @@
 
                     card.innerHTML = `
                         <div class="bey-header">
+                            <div class="bey-info">
+                                <span class="bey-tag tag-${lineaSegura}">[${lineaSegura}] ${bey.id}</span>
+                                <h3 class="bey-name">${nombreSeguro}</h3>
+                            </div>
                             <div class="circles-group grid-cxi">
                                 <div id="circle-LC-${bey.id}" class="circle ${marcas.lockChip ? 'active-LC' : ''}">${imgLC}</div>
                                 <div id="circle-OB-${bey.id}" class="circle ${marcas.overBlade ? 'active-OB' : ''}">${imgOB}</div>
@@ -731,10 +665,6 @@
                                 <div id="circle-As-${bey.id}" class="circle ${marcas.assist ? 'active-As' : ''}">${imgAs}</div>
                                 <div id="circle-R-${bey.id}" class="circle ${marcas.ratchet ? 'active-R' : ''}">${imgR}</div>
                                 <div id="circle-Bi-${bey.id}" class="circle ${marcas.bit ? 'active-Bi' : ''}">${imgBi}</div>
-                            </div>
-                            <div class="bey-info">
-                                <span class="bey-tag tag-${lineaSegura}">[${lineaSegura}] ${bey.id}</span>
-                                <h3 class="bey-name">${nombreSeguro}</h3>
                             </div>
                         </div>
 
@@ -766,9 +696,7 @@
                         </div>
                     `;
                 } 
-                // ==========================================================
-                // 🚫 MANTENER INTACTO: LÍNEAS TRADICIONALES (BX, UX, CX)
-                // ==========================================================
+                // === LÍNEAS TRADICIONALES (BX, UX, CX) ===
                 else {
                     const imgB = bey.imgBlade ? `<img src="${bey.imgBlade}" style="object-fit: cover;">` : '-';
                     const imgR = bey.imgRatchet ? `<img src="${bey.imgRatchet}" style="object-fit: contain; padding: 6px; box-sizing: border-box;">` : '-';
@@ -795,15 +723,15 @@
 
                     card.innerHTML = `
                         <div class="bey-header">
+                            <div class="bey-info">
+                                <span class="bey-tag tag-${lineaSegura}">[${lineaSegura}] ${bey.id}</span>
+                                <h3 class="bey-name">${nombreSeguro}</h3>
+                            </div>
                             <div class="circles-group">
                                 <div id="circle-B-${bey.id}" class="circle ${marcas.blade ? 'active-B' : ''}">${imgB}</div>
                                 ${circuloAssistHtml}
                                 <div id="circle-R-${bey.id}" class="circle ${marcas.ratchet ? 'active-R' : ''}">${imgR}</div>
                                 <div id="circle-Bi-${bey.id}" class="circle ${marcas.bit ? 'active-Bi' : ''}">${imgBi}</div>
-                            </div>
-                            <div class="bey-info">
-                                <span class="bey-tag tag-${lineaSegura}">[${lineaSegura}] ${bey.id}</span>
-                                <h3 class="bey-name">${nombreSeguro}</h3>
                             </div>
                         </div>
 
@@ -827,9 +755,8 @@
 
                 container.appendChild(card);
             });
-        } // <--- AQUÍ CIERRA CORRECTAMENTE RENDERLIST
+        }
 
-        // === ENTRADA AUTOMÁTICA AL CARGAR LA PÁGINA (UBICACIÓN CORRECTA) ===
         window.addEventListener('DOMContentLoaded', () => {
             piezasMarcadas = JSON.parse(localStorage.getItem('misPiezasX')) || {};
             
