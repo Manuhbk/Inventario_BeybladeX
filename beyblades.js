@@ -1707,7 +1707,7 @@ const BEYBLADES_DB = [
     },
 
 { 
-        id: "UX-10 Customize Set", 
+        id: "UX-10-01 Customize Set", 
         linea: "UX", 
         nombre: "KnightMail 3-85BS", 
         blade: "KnightMail", 
@@ -1718,7 +1718,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/BS-2.png" 
     },
     { 
-        id: "UX-10 Customize Set", 
+        id: "UX-10-02 Customize Set", 
         linea: "UX", 
         nombre: "PteraSwing 7-70B", 
         blade: "PteraSwing", 
@@ -1729,7 +1729,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/B-6.png" 
     },
     { 
-        id: "UX-10 Customize Set", 
+        id: "UX-10-03 Customize Set", 
         linea: "UX", 
         nombre: "HellsHammer (Metal Coat: Blue)", 
         blade: "HellsHammer", 
@@ -1740,7 +1740,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/R-4.png" 
     },
     { 
-        id: "UX-10 Customize Set", 
+        id: "UX-10-04 Customize Set", 
         linea: "UX", 
         nombre: "TyrannoBeat 1-60RA (Metal Coat: Red)", 
         blade: "TyrannoBeat", 
@@ -1752,7 +1752,7 @@ const BEYBLADES_DB = [
     },
 
               { 
-        id: "UX-10 Customize Set", 
+        id: "UX-10-05 Customize Set", 
         linea: "UX", 
         nombre: "n/a", 
         blade: "n-a", 
@@ -1765,7 +1765,7 @@ const BEYBLADES_DB = [
 
 
                   { 
-        id: "UX-10 Customize Set", 
+        id: "UX-10-06 Customize Set", 
         linea: "UX", 
         nombre: "n/a", 
         blade: "n-a", 
@@ -2141,7 +2141,7 @@ const BEYBLADES_DB = [
     //BARCELONA COLABORACION//
 
         { 
-        id: "UX-00 Colaboracion Barcelona", 
+        id: "UX-00-01 Colaboracion Barcelona", 
         linea: "UX", 
         nombre: "DranBuster 1-60A Metal Coat Barcelona", 
         blade: "DranBuster", 
@@ -2153,7 +2153,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "UX-00 Colaboracion Barcelona", 
+        id: "UX-00-02 Colaboracion Barcelona", 
         linea: "UX", 
         nombre: "HellsHammer 3-70H Metal Coat Barcelona", 
         blade: "HellsHammer", 
@@ -2181,7 +2181,7 @@ const BEYBLADES_DB = [
    // HASBRO UX
 
         { 
-        id: "Hasbro Beyblade X Basic/Unique Line Starter Packs", 
+        id: "Hasbro Beyblade X Basic/Unique Line Starter Packs 1", 
         linea: "UX", 
         nombre: "DranBuster 5-70DB", 
         blade: "DranBuster", 
@@ -2193,7 +2193,7 @@ const BEYBLADES_DB = [
     },
 
  { 
-        id: "Hasbro Beyblade X Basic/Unique Line Starter Packs", 
+        id: "Hasbro Beyblade X Basic/Unique Line Starter Packs 2", 
         linea: "UX", 
         nombre: "Stun Medusa 9-60GB", 
         blade: "StunMedusa", 
@@ -2204,7 +2204,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GB-7.png" 
     },
     { 
-        id: "Hasbro Beyblade X Infinity Starter Packs", 
+        id: "Hasbro Beyblade X Infinity Starter Packs 1", 
         linea: "UX", 
         nombre: "Valor Bison 5-60FB", 
         blade: "ValorBison", 
@@ -2215,7 +2215,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/FB-2.png" 
     },
     { 
-        id: "Hasbro Beyblade X Infinity Starter Packs", 
+        id: "Hasbro Beyblade X Infinity Starter Packs 2", 
         linea: "UX", 
         nombre: "Shatter Horus 9-65GB", 
         blade: "ShatterHorus", 
@@ -2227,7 +2227,7 @@ const BEYBLADES_DB = [
     },
     
        { 
-        id: "Hasbro - Beyblade X Dual Pack", 
+        id: "Hasbro - Beyblade X Dual Pack 1", 
         linea: "UX", 
         nombre: "HackViking 4-55O", 
         blade: "HackViking", 
@@ -2240,7 +2240,7 @@ const BEYBLADES_DB = [
 
 
            { 
-        id: "Hasbro - Beyblade X Dual Pack", 
+        id: "Hasbro - Beyblade X Dual Pack 2", 
         linea: "UX", 
         nombre: "Ghost Circle 4-60LR (Ya registrado)", 
         blade: "n-a", 
@@ -2252,7 +2252,7 @@ const BEYBLADES_DB = [
     },
 
        { 
-        id: "Hasbro - Beyblade X Dual Pack", 
+        id: "Hasbro - Beyblade X Dual Pack 3", 
         linea: "UX", 
         nombre: "ClampCrab 9-65S", 
         blade: "ClampCrab", 
@@ -2858,7 +2858,7 @@ const BEYBLADES_DB = [
     // LANZAMIENTOS GLOBALES / PROMOS CX
     // ==========================================
     { 
-        id: "Hasbro CX Starter", 
+        id: "Hasbro CX Starter 01", 
         linea: "CX", 
         nombre: "Fort Hornet R 7-60T", 
         blade: "FortHornet", 
@@ -2871,7 +2871,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/HT-2.png" 
     },
     { 
-        id: "Hasbro CX Starter", 
+        id: "Hasbro CX Starter 02", 
         linea: "CX", 
         nombre: "Wriggle Kraken S 3-85O", 
         blade: "WriggleKraken", 
@@ -2884,7 +2884,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/O-7.png" 
     },
     { 
-        id: "Hasbro CX Starter", 
+        id: "Hasbro CX Starter 03", 
         linea: "CX", 
         nombre: "Antler Stag B 2-60HN", 
         blade: "AntlerStag", 
@@ -2897,7 +2897,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/HN-6.png" 
     },
     { 
-        id: "Hasbro CX Starter", 
+        id: "Hasbro CX Starter 04", 
         linea: "CX", 
         nombre: "Fang Leon T 4-60U", 
         blade: "FangLeon", 
@@ -3003,7 +3003,7 @@ const BEYBLADES_DB = [
     },
 
            { 
-        id: "CX-00 Rare Bey Get Campaign", 
+        id: "CX-00 Rare Bey Get Campaign 01", 
         linea: "CX", 
         nombre: "DrakeBrave G4-70I Metal Coat: Blue", 
         blade: "DrakeBrave", 
@@ -3017,7 +3017,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "CX-00 Rare Bey Get Campaign", 
+        id: "CX-00 Rare Bey Get Campaign 02", 
         linea: "CX", 
         nombre: "Bucks Antlers B 2-60D Metal Coat: Orange", 
         blade: "BucksAntlers", 
@@ -3032,7 +3032,7 @@ const BEYBLADES_DB = [
 
 
             { 
-        id: "CX-00 Rare Bey Get Campaign", 
+        id: "CX-00 Rare Bey Get Campaign 03", 
         linea: "CX", 
         nombre: "Kraken Wriggle S 3-70O Metal Coat: Blue", 
         blade: "KrakenWriggle", 
@@ -3047,7 +3047,7 @@ const BEYBLADES_DB = [
 
 
             { 
-        id: "CX-00 Rare Bey Get Campaign", 
+        id: "CX-00 Rare Bey Get Campaign 04", 
         linea: "CX", 
         nombre: "Hornet Fort R 7-60T Metal Coat: Yellow", 
         blade: "HornetFort", 
@@ -3254,7 +3254,7 @@ const BEYBLADES_DB = [
 // LINEA CXI: PROMOCIONALES / EVENTOS ESPECIALES
 // ==========================================
 { 
-    id: "CXI Hasbro Starter Infinite", 
+    id: "CXI Hasbro Starter Infinite 01", 
     linea: "CXI", 
     nombre: "Hurricane Enlil IS 7-55T", 
     lockChip: "Enlil", 
