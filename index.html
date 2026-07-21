@@ -612,54 +612,72 @@ function toggleComboStock(beyId) {
             filtrarBusqueda();
         }
 
-        function filtrarBusqueda() {
-            const query = document.getElementById('search-input').value.toLowerCase().trim();
-            const lista = obtenerCatalogo();
-            
-            let filtrados = lista.filter(bey => {
-                const lineaBey = (bey.linea || 'BX').toUpperCase();
-                const filtro = filtroActual.toUpperCase();
+function filtrarBusqueda() {
+    const query = document.getElementById('search-input').value.toLowerCase().trim();
+    const lista = obtenerCatalogo();
+    
+    let filtrados = lista.filter(bey => {
+        const lineaBey = (bey.linea || 'BX').toUpperCase();
+        const filtro = filtroActual.toUpperCase();
 
-                if (filtro === 'OBTENIDOS') {
-                    const marcas = piezasMarcadas[bey.id];
-                    if (!marcas) return false;
-                    return marcas.blade || marcas.ratchet || marcas.bit || marcas.assist || 
-                           marcas.lockChip || marcas.overBlade || marcas.metalBlade;
-                }
-
-                if (filtro === 'TODOS') return true;
-                
-                // ✅ COMPARACIÓN EXACTA: CX solo muestra CX, CXI solo muestra CXI
-                return lineaBey === filtro;
-            });
-
-            if (query !== '') {
-                filtrados = filtrados.filter(bey => {
-                    const nombreBitCompleto = DICCIONARIO_BITS[bey.bit] ? DICCIONARIO_BITS[bey.bit].toLowerCase() : '';
-                    const nombreAssistCompleto = DICCIONARIO_ASSIST[bey.assistBlade] ? DICCIONARIO_ASSIST[bey.assistBlade].toLowerCase() : '';
-                    const nombreMetalCompleto = DICCIONARIO_METAL[bey.metalBlade] ? DICCIONARIO_METAL[bey.metalBlade].toLowerCase() : '';
-                    const nombreOverCompleto = DICCIONARIO_OVER[bey.overBlade] ? DICCIONARIO_OVER[bey.overBlade].toLowerCase() : '';
-
-                    const nombreBey = (bey.nombre || '').toLowerCase();
-                    const idBey = (bey.id || '').toLowerCase();
-                    const bladeBey = (bey.blade || '').toLowerCase();
-                    const ratchetBey = (bey.ratchet || '').toLowerCase();
-                    const bitSigla = (bey.bit || '').toLowerCase();
-
-                    return nombreBey.includes(query) || 
-                           idBey.includes(query) || 
-                           bladeBey.includes(query) ||
-                           ratchetBey.includes(query) ||
-                           bitSigla.includes(query) || 
-                           nombreBitCompleto.includes(query) ||
-                           nombreAssistCompleto.includes(query) ||
-                           nombreMetalCompleto.includes(query) ||
-                           nombreOverCompleto.includes(query);
-                });
-            }
-
-            renderList(filtrados);
+        if (filtro === 'OBTENIDOS') {
+            const marcas = piezasMarcadas[bey.id];
+            if (!marcas) return false;
+            return marcas.blade || marcas.ratchet || marcas.bit || marcas.assist || 
+                   marcas.lockChip || marcas.overBlade || marcas.metalBlade;
         }
+
+        if (filtro === 'TODOS') return true;
+        return lineaBey === filtro;
+    });
+
+    // 🔍 BÚSQUEDA INTELIGENTE POR PIEZA / TIPO DE PIEZA
+    if (query !== '') {
+        filtrados = filtrados.filter(bey => {
+            // Textos base del Beyblade
+            const nombreBey = (bey.nombre || '').toLowerCase();
+            const idBey = (bey.id || '').toLowerCase();
+            const bladeBey = (bey.blade || '').toLowerCase();
+            const ratchetBey = (bey.ratchet || '').toLowerCase();
+            const bitSigla = (bey.bit || '').toLowerCase();
+            const assistSigla = (bey.assistBlade || '').toLowerCase();
+            const lockChip = (bey.lockChip || '').toLowerCase();
+            const overBlade = (bey.overBlade || '').toLowerCase();
+            const metalBlade = (bey.metalBlade || '').toLowerCase();
+
+            // Nombres expandidos de los diccionarios
+            const nombreBitCompleto = DICCIONARIO_BITS[bey.bit] ? DICCIONARIO_BITS[bey.bit].toLowerCase() : '';
+            const nombreAssistCompleto = DICCIONARIO_ASSIST[bey.assistBlade] ? DICCIONARIO_ASSIST[bey.assistBlade].toLowerCase() : '';
+            const nombreMetalCompleto = DICCIONARIO_METAL[bey.metalBlade] ? DICCIONARIO_METAL[bey.metalBlade].toLowerCase() : '';
+            const nombreOverCompleto = DICCIONARIO_OVER[bey.overBlade] ? DICCIONARIO_OVER[bey.overBlade].toLowerCase() : '';
+
+            // 1. Coincidencias exactas o parciales por nombre de pieza
+            const coincidePieza = 
+                nombreBey.includes(query) || 
+                idBey.includes(query) || 
+                bladeBey.includes(query) ||
+                ratchetBey.includes(query) ||
+                bitSigla === query || 
+                nombreBitCompleto.includes(query) ||
+                nombreAssistCompleto.includes(query) ||
+                nombreMetalCompleto.includes(query) ||
+                nombreOverCompleto.includes(query) ||
+                lockChip.includes(query) ||
+                overBlade.includes(query) ||
+                metalBlade.includes(query);
+
+            // 2. Filtro por tipo de pieza genérico
+            if (query === 'ratchet' || query === 'ratchets') return ratchetBey !== '' && ratchetBey !== 'n/a' && ratchetBey !== 'n-a';
+            if (query === 'bit' || query === 'bits') return bitSigla !== '' && bitSigla !== 'n/a';
+            if (query === 'blade' || query === 'blades') return bladeBey !== '' || metalBlade !== '';
+            if (query === 'assist') return assistSigla !== '' && assistSigla !== 'n/a';
+
+            return coincidePieza;
+        });
+    }
+
+    renderList(filtrados);
+}
         
         function renderList(beysAFiltrar) {
             const container = document.getElementById('beyblades-list');
