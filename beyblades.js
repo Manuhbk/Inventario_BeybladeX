@@ -2709,6 +2709,7 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/5-80-cx08-01.png", 
         imgBit: "imagenes/bits/WB-4.png" 
     },
+
     { 
         id: "CX-08 Random Booster Vol. 7 02", 
         linea: "CX", 
@@ -2722,6 +2723,7 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/3-85-cx08-02.png", 
         imgBit: "imagenes/bits/HT-3.png" 
     },
+
     { 
         id: "CX-08 Random Booster Vol. 7 03", 
         linea: "CX", 
@@ -2735,6 +2737,7 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/1-60-cx08-03.png", 
         imgBit: "imagenes/bits/F-11.png" 
     },
+
     { 
         id: "CX-08 Random Booster Vol. 7 04", 
         linea: "UX", 
@@ -2746,6 +2749,7 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/5-80-cx08-04.png", 
         imgBit: "imagenes/bits/MN-3.png" 
     },
+    
     { 
         id: "CX-08 Random Booster Vol. 7 05", 
         linea: "BX", 
