@@ -1333,18 +1333,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GB-6.png" 
     },
 
-        { 
-        id: "Hasbro - Beyblade X Booster Pack 7", 
-        linea: "BX", 
-        nombre: "GustBat 3-85GP", 
-        blade: "GustBat", 
-        ratchet: "3-85", 
-        bit: "GP",
-        imgBlade: "imagenes/blades/gust.png", 
-        imgRatchet: "imagenes/ratchet/3-85-gust.png", 
-        imgBit: "imagenes/bits/GP-1.png" 
-    },
-
+   
          { 
         id: "Hasbro - Beyblade X Booster Pack 8", 
         linea: "BX", 
