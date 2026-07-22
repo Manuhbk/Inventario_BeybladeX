@@ -458,26 +458,36 @@
         </div>
 
         <!-- === PANEL DE BÚSQUEDA MULTI-CAMPO COMPACTO === -->
+
+<!-- === PANEL DE BÚSQUEDA MULTI-CAMPO COMPACTO === -->
         <div class="search-grid">
             <div class="search-field">
-                <label>Blades</label>
-                <input type="text" id="search-blade" placeholder="ej: Dran..." oninput="filtrarBusqueda()">
+                <label for="search-blade">Blade</label>
+                <input type="text" id="search-blade" placeholder="ej: Aero..." onkeyup="filtrarBusqueda()">
             </div>
             <div class="search-field">
-                <label>Ratchet</label>
-                <input type="text" id="search-ratchet" placeholder="ej: 3-60..." oninput="filtrarBusqueda()">
+                <label for="search-ratchet">Ratchet</label>
+                <input type="text" id="search-ratchet" placeholder="ej: 3-60..." onkeyup="filtrarBusqueda()">
             </div>
             <div class="search-field">
-                <label>Bit</label>
-                <input type="text" id="search-bit" placeholder="ej: Rush..." oninput="filtrarBusqueda()">
+                <label for="search-bit">Bit</label>
+                <input type="text" id="search-bit" placeholder="ej: Rush..." onkeyup="filtrarBusqueda()">
             </div>
             <div class="search-field">
-                <label>Assist</label>
-                <input type="text" id="search-assist" placeholder="ej: Slash..." oninput="filtrarBusqueda()">
+                <label for="search-lockchip">Lockchip</label>
+                <input type="text" id="search-lockchip" placeholder="ej: Unicorn..." onkeyup="filtrarBusqueda()">
             </div>
             <div class="search-field">
-                <label>Lockchips / OB</label>
-                <input type="text" id="search-chip" placeholder="ej: Unicorn..." oninput="filtrarBusqueda()">
+                <label for="search-assist">Assist Blade</label>
+                <input type="text" id="search-assist" placeholder="ej: Wheel..." onkeyup="filtrarBusqueda()">
+            </div>
+            <div class="search-field">
+                <label for="search-over">Over Blade</label>
+                <input type="text" id="search-over" placeholder="ej: Break..." onkeyup="filtrarBusqueda()">
+            </div>
+            <div class="search-field">
+                <label for="search-metal">Metal Blade</label>
+                <input type="text" id="search-metal" placeholder="ej: Delta..." onkeyup="filtrarBusqueda()">
             </div>
         </div>
 
@@ -500,7 +510,7 @@
             "D": "Dot", "G": "Glide", "E": "Elevate", "FB": "Free Ball",
             "BS": "Bound Spike", "RA": "Rubber Accel", "L": "Level", "TP": "Trans Point",
             "LR": "Low Rush", "UN": "Under Needle", "V": "Vortex", "LO": "Low Orb",
-            "W": "Wedge", "K": "Kick", "Z": "Zap", "GU": "Gear Unite", "J": "Jolt", "GR": "Gear Rush", "Tr":"Turbo"
+            "W": "Wedge", "K": "Kick", "Z": "Zap", "DS": "Disk Spike","GU": "Gear Unite", "J": "Jolt", "GR": "Gear Rush", "Tr":"Turbo"
         };
 
         const DICCIONARIO_OVER = {
@@ -646,12 +656,14 @@
             filtrarBusqueda();
         }
 
- function filtrarBusqueda() {
-            const qBlade = document.getElementById('search-blade').value.toLowerCase().trim();
-            const qRatchet = document.getElementById('search-ratchet').value.toLowerCase().trim();
-            const qBit = document.getElementById('search-bit').value.toLowerCase().trim();
-            const qAssist = document.getElementById('search-assist').value.toLowerCase().trim();
-            const qChip = document.getElementById('search-chip').value.toLowerCase().trim();
+        function filtrarBusqueda() {
+            const qBlade = document.getElementById('search-blade')?.value.toLowerCase().trim() || '';
+            const qRatchet = document.getElementById('search-ratchet')?.value.toLowerCase().trim() || '';
+            const qBit = document.getElementById('search-bit')?.value.toLowerCase().trim() || '';
+            const qLockchip = document.getElementById('search-lockchip')?.value.toLowerCase().trim() || '';
+            const qAssist = document.getElementById('search-assist')?.value.toLowerCase().trim() || '';
+            const qOver = document.getElementById('search-over')?.value.toLowerCase().trim() || '';
+            const qMetal = document.getElementById('search-metal')?.value.toLowerCase().trim() || '';
 
             const lista = obtenerCatalogo();
             
@@ -670,32 +682,31 @@
                 return lineaBey === filtro;
             });
 
-            // 🔍 FILTRADO MULTI-CAMPO FLEXIBLE Y PRECISO
+            // 🔍 FILTRADO MULTI-CAMPO COMPLETO Y EXACTO
             filtrados = filtrados.filter(bey => {
                 const nombreBey = (bey.nombre || '').toLowerCase();
                 const idBey = (bey.id || '').toLowerCase();
                 const bladeBey = (bey.blade || '').toLowerCase();
-                const metalBlade = (bey.metalBlade || '').toLowerCase();
                 const ratchetBey = (bey.ratchet || '').toLowerCase();
                 const bitSigla = (bey.bit || '').toLowerCase();
-                const assistSigla = (bey.assistBlade || '').toLowerCase();
                 const lockChip = (bey.lockChip || '').toLowerCase();
+                const assistSigla = (bey.assistBlade || '').toLowerCase();
                 const overBlade = (bey.overBlade || '').toLowerCase();
+                const metalBlade = (bey.metalBlade || '').toLowerCase();
 
                 const nombreBitCompleto = DICCIONARIO_BITS[bey.bit] ? DICCIONARIO_BITS[bey.bit].toLowerCase() : '';
                 const nombreAssistCompleto = DICCIONARIO_ASSIST[bey.assistBlade] ? DICCIONARIO_ASSIST[bey.assistBlade].toLowerCase() : '';
 
-                // Búsquedas individuales por campo
-                const matchBlade = qBlade === '' || bladeBey.includes(qBlade) || metalBlade.includes(qBlade) || nombreBey.includes(qBlade) || idBey.includes(qBlade);
+                // Coincidencias por cada campo
+                const matchBlade = qBlade === '' || bladeBey.includes(qBlade) || nombreBey.includes(qBlade) || idBey.includes(qBlade);
                 const matchRatchet = qRatchet === '' || ratchetBey.includes(qRatchet);
-                
-                // 🔥 COINCIDENCIA DE BIT: Revisa sigla exacta O coincidencia en nombre completo (ej: "F" o "Flat")
                 const matchBit = qBit === '' || bitSigla === qBit || nombreBitCompleto.includes(qBit);
-                
+                const matchLockchip = qLockchip === '' || lockChip.includes(qLockchip);
                 const matchAssist = qAssist === '' || assistSigla === qAssist || nombreAssistCompleto.includes(qAssist);
-                const matchChip = qChip === '' || lockChip.includes(qChip) || overBlade.includes(qChip);
+                const matchOver = qOver === '' || overBlade.includes(qOver);
+                const matchMetal = qMetal === '' || metalBlade.includes(qMetal);
 
-                return matchBlade && matchRatchet && matchBit && matchAssist && matchChip;
+                return matchBlade && matchRatchet && matchBit && matchLockchip && matchAssist && matchOver && matchMetal;
             });
 
             renderList(filtrados);

@@ -803,13 +803,13 @@ const BEYBLADES_DB = [
     },
 
     { 
-        id: "BX-45 & Hasbro Calibur Samurai and Obsidian Shell Dual Pack", 
+        id: "Hasbro Calibur Samurai and Obsidian Shell Dual Pack", 
         linea: "BX", 
         nombre: "BlackShell 3-85S", 
         blade: "BlackShell", 
         ratchet: "3-85", 
         bit: "S",
-        imgBlade: "imagenes/N-A", 
+        imgBlade: "imagenes/blades/bx-35-02.png", 
         imgRatchet: "imagenes/ratchet/3-85-cx17-04.png", 
         imgBit: "imagenes/bits/S-5.png" 
     },
@@ -1049,7 +1049,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "Asia Championship Commemoration Dran Deck Starter", 
+        id: "Asia Championship Commemoration Dran Deck Starter 1", 
         linea: "BX", 
         nombre: "DranSword 4-80DB", 
         blade: "DranSword", 
@@ -1061,7 +1061,7 @@ const BEYBLADES_DB = [
     },
 
     { 
-        id: "Asia Championship Commemoration Dran Deck Starter", 
+        id: "Asia Championship Commemoration Dran Deck Starter 2", 
         linea: "BX", 
         nombre: "DranDagger 9-60LF", 
         blade: "DranDagger", 
@@ -1221,7 +1221,7 @@ const BEYBLADES_DB = [
     },
 
 { 
-        id: "J-League Colaboration", 
+        id: "J-League Colaboration 01", 
         linea: "BX", 
         nombre: "DranSword 1-60V (Metal Coat Black)", 
         blade: "DranSword", 
@@ -1234,7 +1234,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "J-League Colaboration", 
+        id: "J-League Colaboration 02", 
         linea: "BX", 
         nombre: "CobaltDragoon 9-60F (Metal Coat White)", 
         blade: "CobaltDragoon", 
@@ -2271,14 +2271,14 @@ const BEYBLADES_DB = [
 
 
            { 
-        id: "Hasbro - Circle Ghost and Hack Viking Dual Pack", 
+        id: "Hasbro -Circle Ghost and Hack Viking Dual Pack", 
         linea: "UX", 
-        nombre: "Ghost Circle 4-60LR (Ya registrado)", 
-        blade: "n-a", 
-        ratchet: "n-a", 
+        nombre: "Ghost Circle 4-60LR", 
+        blade: "GhostCircle", 
+        ratchet: "4-60", 
         bit: "LR",
-        imgBlade: "imagenes/NA.png", 
-        imgRatchet: "imagenes/NA.png", 
+        imgBlade: "imagenes/blades/UX/ux-12-02.png", 
+        imgRatchet: "imagenes/ratchet/4-60-ux12-02.png", 
         imgBit: "imagenes/bits/LR-3.png" 
     },
 
@@ -2388,7 +2388,7 @@ const BEYBLADES_DB = [
         id: "BX-50 Random Booster Vol. 11 03", 
         linea: "UX", 
         nombre: "ImpactDrake 7-55FB", 
-        blade: "ImpactDrakeVariante", 
+        blade: "ImpactDrake", 
         ratchet: "7-55", 
         bit: "FB",
         imgBlade: "imagenes/blades/bx-50-03.png", 
@@ -2399,7 +2399,7 @@ const BEYBLADES_DB = [
         id: "BX-50 Random Booster Vol. 11 04", 
         linea: "UX", 
         nombre: "GhostCircle M-85DS", 
-        blade: "GhostCircleVariante", 
+        blade: "GhostCircle", 
         ratchet: "M-85", 
         bit: "DS",
         imgBlade: "imagenes/blades/bx-50-04.png", 
@@ -2527,7 +2527,7 @@ const BEYBLADES_DB = [
         id: "UX-18 Random Booster Vol. 8 03", 
         linea: "CX", 
         nombre: "PegasusBrush M3-85W", 
-        blade: "PegasusBrushVariante", 
+        blade: "PegasusBrush", 
         assistBlade: "M", 
         ratchet: "6-60", 
         bit: "W",
