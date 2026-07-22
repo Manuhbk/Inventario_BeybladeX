@@ -6,6 +6,48 @@
     <title>Beyblade X inventario - By ManuHBK</title>
     <link rel="icon" type="image/jpeg" href="LOGO.jpg">
     <style>
+
+        /* === BURBUJA FLOTANTE SUBTIL ABAJO A LA DERECHA === */
+        .float-donate-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            background: linear-gradient(135deg, #009ee3, #0072bc);
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 158, 227, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .float-donate-btn:hover {
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 158, 227, 0.6);
+            color: #ffffff;
+        }
+
+        .donate-icon {
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .float-donate-btn {
+                padding: 10px 12px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+
         :root {
             /* === Paleta Litoral Premium y Enérgica === */
             --bg-main: #060b13;        /* Azul abisal (casi negro) para contraste extremo */
@@ -957,5 +999,12 @@
 
         });
     </script>
+
+<!-- BURBUJA FLOTANTE MERCADO PAGO -->
+<a href="https://link.mercadopago.cl/manuhbk" target="_blank" class="float-donate-btn" title="Apoyar al proyecto">
+    <span class="donate-icon">💙</span>
+    <span class="donate-text">Apoyar</span>
+</a> 
+
 </body>
 </html>
