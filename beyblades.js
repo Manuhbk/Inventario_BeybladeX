@@ -2022,7 +2022,7 @@ const BEYBLADES_DB = [
         bit: "H",
         imgBlade: "imagenes/blades/UX/ux-19.png", 
         imgRatchet: "imagenes/ratchet/Griffon.png", 
-        imgBit: "imagenes/bits/H-2.png" 
+        imgBit: "imagenes/bits/H-4.png" 
     },
 
 
