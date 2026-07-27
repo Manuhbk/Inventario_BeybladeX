@@ -2120,7 +2120,7 @@ const BEYBLADES_DB = [
 
 
         { 
-        id: "UX-00 Color Choice Booster Beyblade Park", 
+        id: "UX-00 Color Choice Booster Beyblade Park 1", 
         linea: "UX", 
         nombre: "DranBuster 1-60A Metal Coat Cyan", 
         blade: "DranBuster", 
@@ -2133,7 +2133,7 @@ const BEYBLADES_DB = [
 
 
         { 
-        id: "UX-00 Color Choice Booster Beyblade Park", 
+        id: "UX-00 Color Choice Booster Beyblade Park 2", 
         linea: "UX", 
         nombre: "DranBuster 1-60A Metal Coat Black", 
         blade: "DranBuster", 
@@ -2145,7 +2145,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "UX-00 Color Choice Booster Beyblade Park", 
+        id: "UX-00 Color Choice Booster Beyblade Park 3", 
         linea: "UX", 
         nombre: "DranBuster 1-60A Metal Coat Violet", 
         blade: "DranBuster", 
