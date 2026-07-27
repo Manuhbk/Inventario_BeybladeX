@@ -2339,8 +2339,8 @@ const BEYBLADES_DB = [
     { 
         id: "UX-00 01", 
         linea: "UX", 
-        nombre: "Glory Valkerion 3-60LF", 
-        blade: "GloryValkerion", 
+        nombre: "Glory Valkirie LF", 
+        blade: "GloryValkirie", 
         ratchet: "n-a", 
         bit: "LF",
         imgBlade: "imagenes/blades/glory.png", 
