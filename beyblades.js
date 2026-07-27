@@ -827,7 +827,7 @@ const BEYBLADES_DB = [
     },
 
     { 
-        id: "BX-46 Battle Entry Set Infinity", 
+        id: "BX-46 Battle Entry Set Infinity Cobalt", 
         linea: "BX", 
         nombre: "CobaltDrake 9-60R", 
         blade: "CobaltDrake", 
@@ -840,7 +840,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "BX-46 Battle Entry Set Infinity", 
+        id: "BX-46 Battle Entry Set Infinity Goat", 
         linea: "BX", 
         nombre: "GoatTackle 7-70T", 
         blade: "GoatTackle", 
@@ -925,7 +925,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "Limited Released Remakes BX-01", 
+        id: "Limited Released Remakes BX-04", 
         linea: "BX", 
         nombre: "Storm Pegasus 3-70RA", 
         blade: "StormPegasus", 
@@ -937,7 +937,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "Limited Released Remakes BX-01-2", 
+        id: "Limited Released Remakes BX-01-5", 
         linea: "BX", 
         nombre: "VictoryValkyrie 2-60RA", 
         blade: "VictoryValkyrie", 
@@ -1088,7 +1088,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "Random Booster Lighting L-Drago", 
+        id: "Random Booster Lighting L-Drago 1", 
         linea: "BX", 
         nombre: "L-Drago 1-60F (Upper Type)", 
         blade: "L-Drago", 
@@ -1100,7 +1100,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "Random Booster Lighting L-Drago", 
+        id: "Random Booster Lighting L-Drago 2", 
         linea: "BX", 
         nombre: "L-Drago 1-60F (Rapid Hit Type)", 
         blade: "L-Drago", 
@@ -1113,7 +1113,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "Coro Coro Comics B4 Beyblade Get", 
+        id: "Coro-Coro Comics B4 Beyblade Get", 
         linea: "BX", 
         nombre: "CobaltDragoon 2-60C Metal Coat Black", 
         blade: "CobaltDragoon", 
@@ -1359,7 +1359,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "Hasbro - Bite Croc and Sting Unicorn Dual Pack", 
+        id: "Hasbro - Bite Croc and Sting Unicorn Dual Pack BiteCroc", 
         linea: "BX", 
         nombre: "BiteCroc 3-60LF", 
         blade: "BiteCroc", 
@@ -1371,7 +1371,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "Hasbro - Bite Croc and Sting Unicorn Dual Pack", 
+        id: "Hasbro - Bite Croc and Sting Unicorn Dual Pack Unicorn", 
         linea: "BX", 
         nombre: "StingUnicorn 4-60P", 
         blade: "StingUnicorn", 
@@ -1385,7 +1385,7 @@ const BEYBLADES_DB = [
 
 
    { 
-        id: "Hasbro - Beyblade X Dual Pack", 
+        id: "Hasbro - Beyblade X Dual Pack GillShark", 
         linea: "BX", 
         nombre: "GillShark 4-70O", 
         blade: "GillShark", 
@@ -1397,7 +1397,7 @@ const BEYBLADES_DB = [
     },
 
        { 
-        id: "Hasbro - Beyblade X Dual Pack", 
+        id: "Hasbro - Beyblade X Dual TackleGoat", 
         linea: "BX", 
         nombre: "TackleGoat 2-70N", 
         blade: "TackleGoat", 
@@ -2185,7 +2185,7 @@ const BEYBLADES_DB = [
 //////////////////////////////////////////////
 
                 { 
-        id: "UX-00 Coro Coro Comics B4 Beyblade Get", 
+        id: "UX-00 Coro Coro Comics B4 Beyblade Get 1", 
         linea: "UX", 
         nombre: "Samurai Saber 2-70L Metallic Coat: Orange", 
         blade: "SamuraiSaber", 
