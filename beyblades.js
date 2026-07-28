@@ -2048,6 +2048,7 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/3-70-aero.png", 
         imgBit: "imagenes/bits/A-2.png" 
     },
+
     { 
         id: "UX-00 Asia Championship Commemoration Dran Deck Starter", 
         linea: "UX", 
@@ -2420,7 +2421,41 @@ const BEYBLADES_DB = [
     },
 
      
-   
+       { 
+        id: "UX-21 HellsNether Deck Set 01", 
+        linea: "UX", 
+        nombre: "HellsNether Z", 
+        blade: "HellsNether", 
+        ratchet: "n-a", 
+        bit: "Z",
+        imgBlade: "imagenes/blades/ux-21-01.png", 
+        imgRatchet: "imagenes/ratchet/M-85-bx50.png", 
+        imgBit: "imagenes/bits/Z-3.png" 
+    },
+
+        { 
+        id: "UX-21 HellsNether Deck Set 02", 
+        linea: "UX", 
+        nombre: "Silverwolf 9-70R Metal Coat: Violet", 
+        blade: "SilverWolf", 
+        ratchet: "9-70", 
+        bit: "R",
+        imgBlade: "imagenes/blades/ux21-02.png", 
+        imgRatchet: "imagenes/ratchet/9-70-ux21.png", 
+        imgBit: "imagenes/bits/R-5.png" 
+    },
+
+        { 
+        id: "UX-21 HellsNether Deck Set 03", 
+        linea: "UX", 
+        nombre: "GhostCircle M-85DS", 
+        blade: "GhostCircle", 
+        ratchet: "M-85", 
+        bit: "DS",
+        imgBlade: "imagenes/blades/wyvern.png", 
+        imgRatchet: "imagenes/ratchet/8-80-ux21.png", 
+        imgBit: "imagenes/bits/B-9.png" 
+    },
     
  
     ///////////////////////////////////FIN UX/////////////////////////////////////
