@@ -2232,7 +2232,7 @@ const BEYBLADES_DB = [
         ratchet: "5-60", 
         bit: "FB",
         imgBlade: "imagenes/blades/UX/valor.png", 
-        imgRatchet: "imagenes/NA.png", 
+        imgRatchet: "imagenes/UXI.png", 
         imgBit: "imagenes/bits/FB-2.png" 
     },
     { 
@@ -2345,7 +2345,7 @@ const BEYBLADES_DB = [
         ratchet: "n-a", 
         bit: "LF",
         imgBlade: "imagenes/blades/glory.png", 
-        imgRatchet: "imagenes/NA.png", 
+        imgRatchet: "imagenes/UXI.png", 
         imgBit: "imagenes/bits/LF-10.png" 
     },
 
