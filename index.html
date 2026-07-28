@@ -507,9 +507,6 @@
 <div class="container">
     <div class="logo-wrapper" style="display: flex; gap: 18px; justify-content: center; align-items: center;">
         <img src="LOGO.jpg" alt="ManuHBK Logo" class="community-logo"> 
-        
-         
-
     </div>
 
         <h1>Inventario de Piezas Beyblade X</h1>
@@ -615,6 +612,9 @@
             "H": "Heavy", "G": "Gravity", "K": "Knuckle", "E": "Erase", "O": "Odd", "Z": "Zillion","V": "Vertical", "M": "Massive"
         };
 
+        // Función Helper para validar n-a / n/a / campos vacíos
+        const esNA = (val) => !val || val.toString().toLowerCase().trim() === 'n-a' || val.toString().toLowerCase().trim() === 'n/a';
+
         function toggleFiltros() {
             const panel = document.getElementById('search-grid-panel');
             const btnText = document.getElementById('toggle-filters-text');
@@ -652,8 +652,8 @@
                     if (marcas.blade) totalBlades++;
                 }
                 
-                if (marcas.ratchet && bey.ratchet) totalRatchets++;
-                if (marcas.bit && bey.bit) totalBits++;
+                if (marcas.ratchet && bey.ratchet && !esNA(bey.ratchet)) totalRatchets++;
+                if (marcas.bit && bey.bit && !esNA(bey.bit)) totalBits++;
             });
 
             document.getElementById('stat-blades').innerHTML = `${totalBlades} <span class="max-total">/ ${maxDisponibles}</span>`;
@@ -661,7 +661,10 @@
             document.getElementById('stat-bits').innerHTML = `${totalBits} <span class="max-total">/ ${maxDisponibles}</span>`;
         }
 
-        function togglePieza(beyId, tipo) {
+        function togglePieza(beyId, tipo, valorPieza) {
+            // Si la pieza no aplica (n-a), bloqueamos la acción
+            if (esNA(valorPieza)) return;
+
             if (!piezasMarcadas[beyId]) {
                 piezasMarcadas[beyId] = { 
                     blade: false, assist: false, ratchet: false, bit: false,
@@ -681,6 +684,10 @@
         }
 
         function toggleComboStock(beyId) {
+            const lista = obtenerCatalogo();
+            const bey = lista.find(b => b.id === beyId);
+            if (!bey) return;
+
             if (!piezasMarcadas[beyId]) {
                 piezasMarcadas[beyId] = { 
                     blade: false, assist: false, ratchet: false, bit: false,
@@ -693,25 +700,33 @@
 
             let todoMarcado = false;
             if (esCXI) {
-                todoMarcado = marcas.lockChip && marcas.overBlade && marcas.metalBlade && marcas.assist && marcas.ratchet && marcas.bit;
+                todoMarcado = (esNA(bey.lockChip) || marcas.lockChip) &&
+                             (esNA(bey.overBlade) || marcas.overBlade) &&
+                             (esNA(bey.metalBlade) || marcas.metalBlade) &&
+                             (esNA(bey.assistBlade) || marcas.assist) &&
+                             (esNA(bey.ratchet) || marcas.ratchet) &&
+                             (esNA(bey.bit) || marcas.bit);
             } else {
-                todoMarcado = marcas.blade && marcas.ratchet && marcas.bit && (marcas.assist || true);
+                todoMarcado = (esNA(bey.blade) || marcas.blade) &&
+                             (esNA(bey.ratchet) || marcas.ratchet) &&
+                             (esNA(bey.bit) || marcas.bit) &&
+                             (esNA(bey.assistBlade) || marcas.assist);
             }
 
             const nuevoEstado = !todoMarcado;
 
             if (esCXI) {
-                marcas.lockChip = nuevoEstado;
-                marcas.overBlade = nuevoEstado;
-                marcas.metalBlade = nuevoEstado;
-                marcas.assist = nuevoEstado;
-                marcas.ratchet = nuevoEstado;
-                marcas.bit = nuevoEstado;
+                marcas.lockChip = esNA(bey.lockChip) ? false : nuevoEstado;
+                marcas.overBlade = esNA(bey.overBlade) ? false : nuevoEstado;
+                marcas.metalBlade = esNA(bey.metalBlade) ? false : nuevoEstado;
+                marcas.assist = esNA(bey.assistBlade) ? false : nuevoEstado;
+                marcas.ratchet = esNA(bey.ratchet) ? false : nuevoEstado;
+                marcas.bit = esNA(bey.bit) ? false : nuevoEstado;
             } else {
-                marcas.blade = nuevoEstado;
-                marcas.assist = nuevoEstado;
-                marcas.ratchet = nuevoEstado;
-                marcas.bit = nuevoEstado;
+                marcas.blade = esNA(bey.blade) ? false : nuevoEstado;
+                marcas.assist = esNA(bey.assistBlade) ? false : nuevoEstado;
+                marcas.ratchet = esNA(bey.ratchet) ? false : nuevoEstado;
+                marcas.bit = esNA(bey.bit) ? false : nuevoEstado;
             }
 
             localStorage.setItem('misPiezasX', JSON.stringify(piezasMarcadas));
@@ -814,7 +829,7 @@
 
             renderList(filtrados);
         }
-        
+
         function renderList(beysAFiltrar) {
             const container = document.getElementById('beyblades-list');
             container.innerHTML = '';
@@ -884,27 +899,27 @@
                             ">⚡ Combo Stock </button>
 
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.lockChip ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'lockChip')">
+                                <input type="checkbox" ${esNA(bey.lockChip) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.lockChip ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'lockChip', '${bey.lockChip}')">
                                 <span><span class="label-LC" style="color: #ffb703; font-weight: bold;">LC:</span> ${bey.lockChip || 'N/A'}</span>
                             </label>
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.overBlade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'overBlade')">
+                                <input type="checkbox" ${esNA(bey.overBlade) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.overBlade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'overBlade', '${bey.overBlade}')">
                                 <span><span class="label-OB" style="color: #ff007f; font-weight: bold;">OB:</span> ${bey.overBlade || 'N/A'}</span>
                             </label>
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.metalBlade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'metalBlade')">
+                                <input type="checkbox" ${esNA(bey.metalBlade) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.metalBlade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'metalBlade', '${bey.metalBlade}')">
                                 <span><span class="label-MB" style="color: #e0aaff; font-weight: bold;">MB:</span> ${bey.metalBlade || 'N/A'}</span>
                             </label>
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.assist ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'assist')">
+                                <input type="checkbox" ${esNA(bey.assistBlade) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.assist ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'assist', '${bey.assistBlade}')">
                                 <span><span class="label-As" style="color: #72efdd; font-weight: bold;">A:</span> ${bey.assistBlade || 'N/A'}</span>
                             </label>
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.ratchet ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'ratchet')">
+                                <input type="checkbox" ${esNA(bey.ratchet) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.ratchet ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'ratchet', '${bey.ratchet}')">
                                 <span><span class="label-R">R:</span> ${bey.ratchet || 'N/A'}</span>
                             </label>
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.bit ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'bit')">
+                                <input type="checkbox" ${esNA(bey.bit) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.bit ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'bit', '${bey.bit}')">
                                 <span><span class="label-Bi">Bi:</span> ${textoBit}</span>
                             </label>
                         </div>
@@ -929,7 +944,7 @@
 
                         checkboxAssistHtml = `
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.assist ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'assist')">
+                                <input type="checkbox" ${esNA(bey.assistBlade) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.assist ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'assist', '${bey.assistBlade}')">
                                 <span><span class="label-As" style="color: #72efdd; font-weight: bold;">A:</span> ${textoAssist}</span>
                             </label>
                         `;
@@ -967,16 +982,16 @@
                             ">⚡ Combo Stock </button>
 
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.blade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'blade')">
+                                <input type="checkbox" ${esNA(bey.blade) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.blade ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'blade', '${bey.blade}')">
                                 <span><span class="label-B">B:</span> ${bey.blade || 'N/A'}</span>
                             </label>
                             ${checkboxAssistHtml}
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.ratchet ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'ratchet')">
+                                <input type="checkbox" ${esNA(bey.ratchet) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.ratchet ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'ratchet', '${bey.ratchet}')">
                                 <span><span class="label-R">R:</span> ${bey.ratchet || 'N/A'}</span>
                             </label>
                             <label class="check-item">
-                                <input type="checkbox" ${marcas.bit ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'bit')">
+                                <input type="checkbox" ${esNA(bey.bit) ? 'disabled style="opacity: 0.3; cursor: not-allowed;"' : ''} ${marcas.bit ? 'checked' : ''} onclick="togglePieza('${bey.id}', 'bit', '${bey.bit}')">
                                 <span><span class="label-Bi">Bi:</span> ${textoBit}</span>
                             </label>
                         </div>
