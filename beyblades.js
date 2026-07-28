@@ -2229,7 +2229,7 @@ const BEYBLADES_DB = [
         linea: "UX", 
         nombre: "Valor Bison 5-60FB", 
         blade: "ValorBison", 
-        ratchet: "5-60", 
+        ratchet: "n-a", 
         bit: "FB",
         imgBlade: "imagenes/blades/UX/valor.png", 
         imgRatchet: "imagenes/UXI.png", 
