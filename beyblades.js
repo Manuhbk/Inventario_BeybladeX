@@ -2428,7 +2428,7 @@ const BEYBLADES_DB = [
         blade: "HellsNether", 
         ratchet: "n-a", 
         bit: "Z",
-        imgBlade: "imagenes/blades/ux-21-01.png", 
+        imgBlade: "imagenes/blades/UX/ux-21-01.png", 
         imgRatchet: "imagenes/ratchet/M-85-bx50.png", 
         imgBit: "imagenes/bits/Z-3.png" 
     },
@@ -2440,7 +2440,7 @@ const BEYBLADES_DB = [
         blade: "SilverWolf", 
         ratchet: "9-70", 
         bit: "R",
-        imgBlade: "imagenes/blades/ux21-02.png", 
+        imgBlade: "imagenes/blades/UX/ux21-02.png", 
         imgRatchet: "imagenes/ratchet/9-70-ux21.png", 
         imgBit: "imagenes/bits/R-5.png" 
     },
@@ -2448,11 +2448,11 @@ const BEYBLADES_DB = [
         { 
         id: "UX-21 HellsNether Deck Set 03", 
         linea: "UX", 
-        nombre: "GhostCircle M-85DS", 
-        blade: "GhostCircle", 
-        ratchet: "M-85", 
-        bit: "DS",
-        imgBlade: "imagenes/blades/wyvern.png", 
+        nombre: "WyvernHover 8-80B", 
+        blade: "HoverWyvern", 
+        ratchet: "8-80", 
+        bit: "B",
+        imgBlade: "imagenes/blades/UX/wyvern.png", 
         imgRatchet: "imagenes/ratchet/8-80-ux21.png", 
         imgBit: "imagenes/bits/B-9.png" 
     },
