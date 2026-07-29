@@ -543,7 +543,7 @@ const BEYBLADES_DB = [
    
 
     { 
-        id: "BX-31 Random Booster Vol.3 01 & Hasbro Dual Pack", 
+        id: "BX-31 Random Booster Vol.3 01 & Hasbro Dual Pack G1542-01", 
         linea: "BX", 
         nombre: "TyrannoBeat 4-70Q (Prize)", 
         blade: "TyrannoBeat", 
@@ -1170,6 +1170,18 @@ const BEYBLADES_DB = [
         imgBlade: "imagenes/blades/bx-00shinobi.png", 
         imgRatchet: "imagenes/ratchet/4-60-shinobi.png", 
         imgBit: "imagenes/bits/LF-6.png" 
+    },
+
+        { 
+        id: "Hasbro Dual Pack G1542-02", 
+        linea: "BX", 
+        nombre: "ShinobiKnife 4-80HN", 
+        blade: "ShinobiKnife", 
+        ratchet: "4-80",    
+        bit: "HN",
+        imgBlade: "imagenes/blades/shinobi.png", 
+        imgRatchet: "imagenes/ratchet/4-80-shinobi.png", 
+        imgBit: "imagenes/bits/HN-7.png" 
     },
 
         { 
