@@ -4,7 +4,7 @@ const BEYBLADES_DB = [
     // === ACTUALIZACIÓN EN TU BASE DE DATOS ===
                
            { 
-                id: "BX-01 & Hasbro Starter", 
+                id: "BX-01 & Hasbro Starter F9580", 
                 linea: "BX", 
                 nombre: "DranSword 3-60F", 
                 blade: "DranSword", 
@@ -17,7 +17,7 @@ const BEYBLADES_DB = [
             },
 
             { 
-                id: "BX-02 & Hasbro Starter", 
+                id: "BX-02 & Hasbro Starter F9583", 
                 linea: "BX", 
                 nombre: "HellsScythe 4-60T", 
                 blade: "HellsScythe", 
@@ -30,7 +30,7 @@ const BEYBLADES_DB = [
             },
             
              { 
-                id: "BX-03 & Hasbro Starter", 
+                id: "BX-03 & Hasbro Starter F9582", 
                 linea: "BX", 
                 nombre: "WizardArrow 4-80B", 
                 blade: "WizardArrow", 
@@ -95,7 +95,7 @@ const BEYBLADES_DB = [
             },
     
             { 
-                id: "BX-08 3on3 Deck Set", 
+                id: "BX-08 3on3 Deck Set & Hasbro Booster G0285", 
                 linea: "BX", 
                 nombre: "HellsScythe 3-80B", 
                 blade: "HellsScythe", 
@@ -108,7 +108,7 @@ const BEYBLADES_DB = [
             },
    
             { 
-                id: "BX-08 3on3 Deck Set & Hasbro Dual Pack", 
+                id: "BX-08 3on3 Deck Set & Hasbro Dual Pack G0196-02", 
                 linea: "BX", 
                 nombre: "WizardArrow 4-60N", 
                 blade: "WizardArrow", 
@@ -135,7 +135,7 @@ const BEYBLADES_DB = [
 
 
          { 
-                id: "BX-13", 
+                id: "BX-13 & Hasbro Booster G0184", 
                 linea: "BX", 
                 nombre: "KnightLance 4-80HN", 
                 blade: "KnightLance", 
@@ -148,45 +148,45 @@ const BEYBLADES_DB = [
             },
 
 
-     // RANDOM BOOSTER VOLUMEN 1
+                // RANDOM BOOSTER VOLUMEN 1
 
 { 
-    id: "BX-14 Random Booster 01 & Hasbro Booster", 
-    linea: "BX", 
-    nombre: "SharkEdge 3-60LF (Prize)", 
-    blade: "SharkEdge", 
-    ratchet: "3-60", 
-    bit: "LF",
-    // Rutas locales de tu PC preparadas para el navegador:
-    imgBlade: "imagenes/blades/bx-14-01.png", 
-    imgRatchet: "imagenes/ratchet/3-60-sharkedge.png", 
-    imgBit: "imagenes/bits/LF-1.png" 
+                id: "BX-14 Random Booster 01 & Hasbro Booster", 
+                linea: "BX", 
+                nombre: "SharkEdge 3-60LF (Prize)", 
+                blade: "SharkEdge", 
+                ratchet: "3-60", 
+                bit: "LF",
+                // Rutas locales de tu PC preparadas para el navegador:
+                imgBlade: "imagenes/blades/bx-14-01.png", 
+                imgRatchet: "imagenes/ratchet/3-60-sharkedge.png", 
+                imgBit: "imagenes/bits/LF-1.png" 
 },
 
 { 
-    id: "BX-14 Random Booster 02", 
-    linea: "BX", 
-    nombre: "Shark Edge 4-80N", 
-    blade: "SharkEdge", 
-    ratchet: "4-80", 
-    bit: "N",
-    // Rutas locales de tu PC preparadas para el navegador:
-    imgBlade: "imagenes/blades/bx-14-02.png", 
-    imgRatchet: "imagenes/ratchet/4-80-sharknaranjo.png", 
-    imgBit: "imagenes/bits/N-3.png" 
+                id: "BX-14 Random Booster 02", 
+                linea: "BX", 
+                nombre: "Shark Edge 4-80N", 
+                blade: "SharkEdge", 
+                ratchet: "4-80", 
+                bit: "N",
+                // Rutas locales de tu PC preparadas para el navegador:
+                imgBlade: "imagenes/blades/bx-14-02.png", 
+                imgRatchet: "imagenes/ratchet/4-80-sharknaranjo.png", 
+                imgBit: "imagenes/bits/N-3.png" 
 },
 
 { 
-    id: "BX-14 Random Booster 03 & Hasbro Dual Pack", 
-    linea: "BX", 
-    nombre: "DranSword 3-80B", 
-    blade: "DranSword", 
-    ratchet: "3-80", 
-    bit: "B",
-    // Rutas locales de tu PC preparadas para el navegador:
-    imgBlade: "imagenes/blades/bx-14-03.png", 
-    imgRatchet: "imagenes/ratchet/3-80-blanca.png", 
-    imgBit: "imagenes/bits/B-4.png" 
+                id: "BX-14 Random Booster 03 & Hasbro Dual Pack G1543-02", 
+                linea: "BX", 
+                nombre: "DranSword 3-80B", 
+                blade: "DranSword", 
+                ratchet: "3-80", 
+                bit: "B",
+                // Rutas locales de tu PC preparadas para el navegador:
+                imgBlade: "imagenes/blades/bx-14-03.png", 
+                imgRatchet: "imagenes/ratchet/3-80-blanca.png", 
+                imgBit: "imagenes/bits/B-4.png" 
 },
 
 
@@ -230,7 +230,7 @@ const BEYBLADES_DB = [
 },
 
 { 
-    id: "BX-15 & Hasbro Starter Pack", 
+    id: "BX-15 & Hasbro Starter G0193", 
     linea: "BX", 
     nombre: "LeonClaw 5-60P", 
     blade: "LeonClaw", 
@@ -286,9 +286,9 @@ const BEYBLADES_DB = [
 },
 
 { 
-    id: "BX-17 Battle Entry Set 01 & Hasbro Dual Pack", 
+    id: "BX-17 Battle Entry Set 01 & Hasbro Dual Pack G1688-02", 
     linea: "BX", 
-    nombre: "DranSword 3-60F (Red Ver.)", 
+    nombre: "DranSword 3-60F (Versión Roja)", 
     blade: "DranSword", 
     ratchet: "3-60", 
     bit: "F", 
@@ -314,7 +314,7 @@ const BEYBLADES_DB = [
 },
 
 { 
-        id: "BX-19", 
+        id: "BX-19 & Hasbro Booster G0192", 
         linea: "BX", 
         nombre: "Booster RhinoHorn 3-80S", 
         blade: "RhinoHorn", 
@@ -325,7 +325,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/S-1.png" 
     },
     { 
-        id: "BX-20 Dran Dagger Deck Set 01", 
+        id: "BX-20 Dran Dagger Deck Set 01 & Hasbro Set Xtreme Battle F9588-01", 
         linea: "BX", 
         nombre: "DranDagger 4-60R", 
         blade: "DranDagger", 
@@ -336,7 +336,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/R-1.png" 
     },
     { 
-        id: "BX-20 Dran Dagger Deck Set 02 & Hasbro Dual Pack", 
+        id: "BX-20 Dran Dagger Deck Set 02 & Hasbro Dual Pack G0198-02", 
         linea: "BX", 
         nombre: "KnightShield 5-80T", 
         blade: "KnightShield", 
@@ -358,7 +358,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/F-3.png" 
     },
     { 
-        id: "BX-21 HellsChain Deck Set 01 & Hasbro Dual Pack", 
+        id: "BX-21 HellsChain Deck Set 01 & Hasbro Dual G0196-01", 
         linea: "BX", 
         nombre: "HellsChain 5-60HT", 
         blade: "HellsChain", 
@@ -369,7 +369,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/HT-1.png" 
     },
     { 
-        id: "BX-21 HellsChain Deck Set 02 & Hasbro Booster Pack", 
+        id: "BX-21 HellsChain Deck Set 02 & Hasbro Booster G1671", 
         linea: "BX", 
         nombre: "KnightLance 3-60LF", 
         blade: "KnightLance", 
@@ -392,7 +392,7 @@ const BEYBLADES_DB = [
     },
 
 
-      { 
+                { 
                 id: "BX-22 Entry Package (diciembre 2023)", 
                 linea: "BX", 
                 nombre: "DranSword 3-60F", 
@@ -403,10 +403,10 @@ const BEYBLADES_DB = [
                 imgBlade: "imagenes/blades/bx1.png", 
                 imgRatchet: "imagenes/ratchet/3-60-azul.png", 
                 imgBit: "imagenes/bits/F.png"
-            },
+                },
   
   { 
-        id: "BX-23", 
+        id: "BX-23 & Hasbro Starter F9324", 
         linea: "BX", 
         nombre: "PhoenixWing 9-60GF", 
         blade: "PhoenixWing", 
@@ -428,7 +428,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GB-1.png" 
     },
     { 
-        id: "BX-24 Random Booster Vol. 2 - 02", 
+        id: "BX-24 Random Booster Vol. 2 - 02 & Hasbro Dual Pack G1543-01", 
         linea: "BX", 
         nombre: "WyvernGale 3-60T", 
         blade: "WyvernGale", 
@@ -472,7 +472,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/HN-3.png" 
     },
     { 
-        id: "BX-24 Random Booster Vol. 2 - 06 & Hasbro Booster Pack", 
+        id: "BX-24 Random Booster Vol. 2 - 06 & Hasbro Booster G1531", 
         linea: "BX", 
         nombre: "WizardArrow 4-80GB", 
         blade: "WizardArrow", 
@@ -496,7 +496,7 @@ const BEYBLADES_DB = [
     },
 
 { 
-        id: "BX-26", 
+        id: "BX-26 & Hasbro Yggdrasil Team Pack G3393-02", 
         linea: "BX", 
         nombre: "UnicornSting 5-60GP", 
         blade: "UnicornSting", 
@@ -506,8 +506,9 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/5-60-bx26.png", 
         imgBit: "imagenes/bits/GP-1.png" 
     },
+
     { 
-        id: "BX-27 Random Booster Select 01 & Hasbro Booster Pack", 
+        id: "BX-27 Random Booster Select 01 & Hasbro Yggdrasil Team Pack G3393-03", 
         linea: "BX", 
         nombre: "SphinxCowl 9-80GN", 
         blade: "SphinxCowl", 
@@ -576,7 +577,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/O-3.png" 
     },
     { 
-        id: "BX-31 Random Booster Vol.3 04", 
+        id: "BX-31 Random Booster Vol.3 04 & Hasbro Booster G1670", 
         linea: "BX", 
         nombre: "DranDagger 4-70P", 
         blade: "DranDagger", 
@@ -587,7 +588,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/P-2.png" 
     },
     { 
-        id: "BX-31 Random Booster Vol.3 05 & Hasbro Booster Pack", 
+        id: "BX-31 Random Booster Vol.3 05 & Hasbro Booster G1534", 
         linea: "BX", 
         nombre: "SharkEdge 1-60Q", 
         blade: "SharkEdge", 
@@ -610,7 +611,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/Q-3.png" 
     },
     { 
-        id: "BX-33", 
+        id: "BX-33 & Hasbro Dual Pack G1686-01", 
         linea: "BX", 
         nombre: "WeissTiger 3-60U", 
         blade: "WeissTiger", 
@@ -621,7 +622,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/U-1.png" 
     },
     { 
-        id: "BX-34", 
+        id: "BX-34 & Hasbro Starter G1491", 
         linea: "BX", 
         nombre: "CobaltDragoon 2-60C", 
         blade: "CobaltDragoon", 
@@ -632,7 +633,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/C-1.png" 
     },
     { 
-        id: "BX-35 Random Booster Vol. 4 01 & Hasbro Booster Pack", 
+        id: "BX-35 Random Booster Vol. 4 01 & Hasbro Booster G1533", 
         linea: "BX", 
         nombre: "BlackShell 4-60D", 
         blade: "BlackShell", 
@@ -667,7 +668,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "BX-35 Random Booster Vol. 4 05 & Hasbro Booster Pack", 
+        id: "BX-35 Random Booster Vol. 4 05 & Hasbro Booster G1756", 
         linea: "BX", 
         nombre: "PhoenixWing 5-80H", 
         blade: "PhoenixWing", 
@@ -689,7 +690,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/D-3.png" 
     },
     { 
-        id: "BX-36 Random Booster Select 01 & Hasbro Booster Pack", 
+        id: "BX-36 Random Booster Select 01 & Hasbro Booster G1669", 
         linea: "BX", 
         nombre: "WhaleWave 5-80E (Prize)", 
         blade: "WhaleWave", 
@@ -736,9 +737,9 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "BX-38", 
+        id: "BX-38 & Hasbro Starter G1673", 
         linea: "BX", 
-        nombre: "CrimsonGaruda 4-70TP & Hasbro Starter Pack", 
+        nombre: "CrimsonGaruda 4-70TP", 
         blade: "CrimsonGaruda", 
         ratchet: "4-70", 
         bit: "TP",
@@ -853,7 +854,7 @@ const BEYBLADES_DB = [
 
 
         { 
-        id: "Limited Released Remakes BX-01-1", 
+        id: "Limited Released Remakes BX-01-1 & Hasbro Beyblade 25th Anniversary Set", 
         linea: "BX", 
         nombre: "Dragoon Storm 4-60RA", 
         blade: "DragoonStorm", 
@@ -949,7 +950,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "Limited Released Remakes BX-04", 
+        id: "Limited Released Remakes BX-04 & Hasbro Beyblade 25th Anniversary Set", 
         linea: "BX", 
         nombre: "Storm Pegasus 3-70RA", 
         blade: "StormPegasus", 
@@ -961,7 +962,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "Limited Released Remakes BX-01-5", 
+        id: "Limited Released Remakes BX-01-5 & Hasbro Beyblade 25th Anniversary Set", 
         linea: "BX", 
         nombre: "VictoryValkyrie 2-60RA", 
         blade: "VictoryValkyrie", 
@@ -997,7 +998,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "Rare Bey Get Battle 02", 
+        id: "Rare Bey Get Battle & Hasbro Booster G2736", 
         linea: "BX", 
         nombre: "CobaltDrake 4-60F", 
         blade: "CobaltDrake", 
@@ -1281,10 +1282,10 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/F-8.png" 
     },
 
-    //HASBRO
+    //HASBRO COSILLAS
 
  { 
-        id: "Hasbro - Beyblade X Booster Pack 1", 
+        id: "Hasbro - Beyblade X Booster G0195", 
         linea: "BX", 
         nombre: "TalonPtera 3-80B", 
         blade: "TalonPtera", 
@@ -1296,7 +1297,7 @@ const BEYBLADES_DB = [
     },
 
      { 
-        id: "Hasbro Set Xtreme Battle", 
+        id: "Hasbro Set Xtreme Battle F9588-02", 
         linea: "BX", 
         nombre: "TuskMammoth 3-60T", 
         blade: "TuskMammoth", 
@@ -1310,7 +1311,7 @@ const BEYBLADES_DB = [
     
 
  { 
-        id: "Hasbro - Beyblade X Booster Pack 2", 
+        id: "Hasbro - Beyblade X Booster G0188", 
         linea: "BX", 
         nombre: "SamuraiSteel 4-80T", 
         blade: "SamuraiSteel", 
@@ -1322,7 +1323,7 @@ const BEYBLADES_DB = [
     },
 
      { 
-        id: "Hasbro - Beyblade X Booster Pack 3", 
+        id: "Hasbro - Beyblade X Booster Pack G0284", 
         linea: "BX", 
         nombre: "RoarTyranno 9-60GF", 
         blade: "RoarTyranno", 
@@ -1358,7 +1359,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "Hasbro - Beyblade X Booster Pack 6", 
+        id: "Hasbro - Beyblade Dual Pack G0198-01", 
         linea: "BX", 
         nombre: "Yell Kong 3-60GB", 
         blade: "Yell Kong", 
@@ -1382,20 +1383,22 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GP-1.png" 
     },
 
+    
+
              { 
-        id: "Hasbro - Beyblade X Booster Pack 9", 
+        id: "Hasbro - Beyblade X Booster G1755", 
         linea: "BX", 
         nombre: "ArrowWizard 4-80O", 
         blade: "ArrowWizard", 
         ratchet: "3-85", 
         bit: "GP",
-        imgBlade: "imagenes/blades/arrownaranjo.png.png", 
+        imgBlade: "imagenes/blades/arrownaranjo.png", 
         imgRatchet: "imagenes/ratchet/4-80-bx21.png", 
         imgBit: "imagenes/bits/O-1.png" 
     },
 
-            { 
-        id: "Hasbro - Bite Croc and Sting Unicorn Dual Pack BiteCroc", 
+      { 
+        id: "Hasbro - Dual Pack G0199-01", 
         linea: "BX", 
         nombre: "BiteCroc 3-60LF", 
         blade: "BiteCroc", 
@@ -1407,7 +1410,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "Hasbro - Bite Croc and Sting Unicorn Dual Pack Unicorn", 
+        id: "Hasbro - Dual Pack G0199-02", 
         linea: "BX", 
         nombre: "StingUnicorn 4-60P", 
         blade: "StingUnicorn", 
@@ -1419,9 +1422,8 @@ const BEYBLADES_DB = [
     },
 
 
-
    { 
-        id: "Hasbro - Beyblade X Dual Pack GillShark", 
+        id: "Hasbro - Beyblade X Dual Pack G1686-02", 
         linea: "BX", 
         nombre: "GillShark 4-70O", 
         blade: "GillShark", 
@@ -1433,7 +1435,7 @@ const BEYBLADES_DB = [
     },
 
        { 
-        id: "Hasbro - Beyblade X Dual TackleGoat", 
+        id: "Hasbro - Beyblade X Dual G1688-01", 
         linea: "BX", 
         nombre: "TackleGoat 2-70N", 
         blade: "TackleGoat", 
@@ -1563,7 +1565,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GU-2.png" 
     },
 
-///// COLABORACION STAR WARS////////
+///// COLABORACION STAR WARS - MARVEL - TRANSFORMERS////////
 
     { 
         id: "Hasbro Star Wars Mandalorian vs Moff Gideon F9589-01", 
@@ -1572,7 +1574,7 @@ const BEYBLADES_DB = [
         blade: "Mandalorian", 
         ratchet: "3-60", 
         bit: "F",
-        imgBlade: "imagenes/blades/mandalorian.png", 
+        imgBlade: "imagenes/blades/colab/mandalorian.png", 
         imgRatchet: "imagenes/ratchet/3-60-mando.png", 
         imgBit: "imagenes/bits/F-15.png" 
     },
@@ -1584,11 +1586,160 @@ const BEYBLADES_DB = [
         blade: "MoffGideon", 
         ratchet: "3-80", 
         bit: "N",
-        imgBlade: "imagenes/blades/moff.png", 
+        imgBlade: "imagenes/blades/colab/moff.png", 
         imgRatchet: "imagenes/ratchet/3-80-moff.png", 
         imgBit: "imagenes/bits/N-10.png" 
     },
     
+
+        { 
+        id: "Hasbro Marvel Iron Man vs Thanos G0287-01", 
+        linea: "BX", 
+        nombre: "IronMan 4-80B", 
+        blade: "IronMan", 
+        ratchet: "4-80", 
+        bit: "B",
+        imgBlade: "imagenes/blades/colab/ironman.png", 
+        imgRatchet: "imagenes/ratchet/4-80-iron.png", 
+        imgBit: "imagenes/bits/B-10.png" 
+    },
+
+            { 
+        id: "Hasbro Marvel Iron Man vs Thanos G0287-01", 
+        linea: "BX", 
+        nombre: "Thanos 4-60P", 
+        blade: "IronMan", 
+        ratchet: "4-80", 
+        bit: "B",
+        imgBlade: "imagenes/blades/colab/thanos.png", 
+        imgRatchet: "imagenes/ratchet/4-60-thanos.png", 
+        imgBit: "imagenes/bits/P-6.png" 
+    },
+
+
+            { 
+        id: "Hasbro Marvel Spiderman vs Venom G0288-01", 
+        linea: "BX", 
+        nombre: "SpiderMan 3-60F", 
+        blade: "SpiderMan", 
+        ratchet: "3-60", 
+        bit: "F",
+        imgBlade: "imagenes/blades/colab/spider.png", 
+        imgRatchet: "imagenes/ratchet/3-60-spider.png", 
+        imgBit: "imagenes/bits/F-16.png" 
+    },
+
+
+                { 
+        id: "Hasbro Marvel Spiderman vs Venom G0288-02", 
+        linea: "BX", 
+        nombre: "Venom 3-80N", 
+        blade: "Venom", 
+        ratchet: "3-80", 
+        bit: "N",
+        imgBlade: "imagenes/blades/colab/venom.png", 
+        imgRatchet: "imagenes/ratchet/3-80-negra.png", 
+        imgBit: "imagenes/bits/N-5.png" 
+    },
+
+                    { 
+        id: "Hasbro Star Wars Luke vs Darth Vader G0290-01", 
+        linea: "BX", 
+        nombre: "LukeSkywalker 4-80 B", 
+        blade: "LukeSkywalker", 
+        ratchet: "4-80", 
+        bit: "B",
+        imgBlade: "imagenes/blades/colab/luke.png", 
+        imgRatchet: "imagenes/ratchet/4-80-luke.png", 
+        imgBit: "imagenes/bits/B-4.png" 
+    },
+
+                    { 
+        id: "Hasbro Star Wars Luke vs Darth Vader G0290-02", 
+        linea: "BX", 
+        nombre: "DarthVader 4-60P", 
+        blade: "DarthVader", 
+        ratchet: "4-60", 
+        bit: "P",
+        imgBlade: "imagenes/blades/colab/vader.png", 
+        imgRatchet: "imagenes/ratchet/4-60-vader.png", 
+        imgBit: "imagenes/bits/P-7.png" 
+    },
+
+                        { 
+        id: "Hasbro Transformers OptimusPrimal vs Starscream G0352-01", 
+        linea: "BX", 
+        nombre: "OptimusPrimal 3-60F", 
+        blade: "OptimusPrimal", 
+        ratchet: "3-60", 
+        bit: "F",
+        imgBlade: "imagenes/blades/colab/primal.png", 
+        imgRatchet: "imagenes/ratchet/3-60-primal.png", 
+        imgBit: "imagenes/bits/F-13.png" 
+    },
+                        { 
+        id: "Hasbro Transformers OptimusPrimal vs Starscream G0352-02", 
+        linea: "BX", 
+        nombre: "Starscream 3-80N", 
+        blade: "Starscream", 
+        ratchet: "3-80", 
+        bit: "N",
+        imgBlade: "imagenes/blades/colab/starscream.png", 
+        imgRatchet: "imagenes/ratchet/3-80-starscream.png", 
+        imgBit: "imagenes/bits/N-9.png" 
+    },
+
+                            { 
+        id: "Hasbro Transformers OptimusPrime vs Megatron G0353-01", 
+        linea: "BX", 
+        nombre: "OptimusPrime 4-60P", 
+        blade: "OptimusPrime", 
+        ratchet: "4-60", 
+        bit: "P",
+        imgBlade: "imagenes/blades/colab/optimus.png", 
+        imgRatchet: "imagenes/ratchet/4-60-optimus.png", 
+        imgBit: "imagenes/bits/P-5.png" 
+    },
+
+                            { 
+        id: "Hasbro Transformers OptimusPrime vs Megatron G0353-02", 
+        linea: "BX", 
+        nombre: "Megatron 4-80B", 
+        blade: "Megatron", 
+        ratchet: "4-80", 
+        bit: "B",
+        imgBlade: "imagenes/blades/colab/megatron.png", 
+        imgRatchet: "imagenes/ratchet/4-80-megatron.png", 
+        imgBit: "imagenes/bits/B-4.png" 
+    },
+
+        { 
+        id: "Hasbro Marvel CaptainAmerica vs RedHulk G1690-01", 
+        linea: "BX", 
+        nombre: "CaptainAmerica 4-70GB", 
+        blade: "CaptainAmerica", 
+        ratchet: "4-70", 
+        bit: "GB",
+        imgBlade: "imagenes/blades/colab/captain.png", 
+        imgRatchet: "imagenes/ratchet/4-70-cap.png", 
+        imgBit: "imagenes/bits/GB-9.png" 
+    },
+
+        { 
+        id: "Hasbro Marvel CaptainAmerica vs RedHulk G1690-02", 
+        linea: "BX", 
+        nombre: "RedHulk 1-80R", 
+        blade: "RedHulk", 
+        ratchet: "1-80", 
+        bit: "R",
+        imgBlade: "imagenes/blades/colab/redhulk.png", 
+        imgRatchet: "imagenes/ratchet/1-80-redhulk.png", 
+        imgBit: "imagenes/bits/R-4.png" 
+    },
+
+
+
+
 /////////////////////////////////// FIN BX////////////////////////////////////////
 
     // EASTER EGG
@@ -1610,7 +1761,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "UX-01 & Hasbro Starter Pack", 
+        id: "UX-01 & Hasbro Starter G1536", 
         linea: "UX", 
         nombre: "DranBuster 1-60A", 
         blade: "DranBuster", 
@@ -1621,7 +1772,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/A-1.png" 
     },
     { 
-        id: "UX-02 & Hasbro Starter Pack", 
+        id: "UX-02 & Hasbro Starter G1752", 
         linea: "UX", 
         nombre: "HellsHammer 3-70H", 
         blade: "HellsHammer", 
@@ -1632,7 +1783,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/H-2.png" 
     },
     { 
-        id: "UX-03 & Hasbro Starter Pack", 
+        id: "UX-03 & Hasbro Starter G1537", 
         linea: "UX", 
         nombre: "WizardRod 5-70DB", 
         blade: "WizardRod", 
@@ -1644,7 +1795,7 @@ const BEYBLADES_DB = [
     },
 
         { 
-        id: "BX-35 Random Booster Vol. 4 04 & Hasbro Starter Pack", 
+        id: "BX-35 Random Booster Vol. 4 04 & Hasbro Starter Pack G1538", 
         linea: "UX", 
         nombre: "WizardRod 1-60R", 
         blade: "WizardRod", 
@@ -1683,7 +1834,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "UX-05 Random Booster Select 01 & Hasbro Starter Pack", 
+        id: "UX-05 Random Booster Select 01 & Hasbro Starter G1539", 
         linea: "UX", 
         nombre: "ShinobiShadow 1-80MN (Prize)", 
         blade: "ShinobiShadow", 
@@ -1716,7 +1867,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GP-4.png" 
     },
     { 
-        id: "UX-06", 
+        id: "UX-06 & Hasbro Dual Pack G1685-02", 
         linea: "UX", 
         nombre: "LeonCrest 7-60GN", 
         blade: "LeonCrest", 
@@ -1728,7 +1879,7 @@ const BEYBLADES_DB = [
     },
 
 { 
-        id: "UX-07 PhoenixRudder Deck Set 01", 
+        id: "UX-07 PhoenixRudder Deck Set 01 & Hasbro Yggdrasil Team Pack G3393-01", 
         linea: "UX", 
         nombre: "PhoenixRudder 9-70G", 
         blade: "PhoenixRudder", 
@@ -1740,7 +1891,7 @@ const BEYBLADES_DB = [
     },
 
     { 
-        id: "UX-07 PhoenixRudder Deck Set 02", 
+        id: "UX-07 PhoenixRudder Deck Set 02 & Hasbro Dual Pack G1685-01", 
         linea: "UX", 
         nombre: "SphinxCowl 1-80GF", 
         blade: "SphinxCowl", 
@@ -1762,7 +1913,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/S-3.png" 
     },
     { 
-        id: "UX-08 & Hasbro Starter Pack", 
+        id: "UX-08 & Hasbro Starter G1674", 
         linea: "UX", 
         nombre: "SilverWolf 3-80FB", 
         blade: "SilverWolf", 
@@ -1773,7 +1924,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/FB-1.png" 
     },
     { 
-        id: "UX-09", 
+        id: "UX-09 & Hasbro Starter G1862", 
         linea: "UX", 
         nombre: "SamuraiSaber 2-70L", 
         blade: "SamuraiSaber", 
@@ -1855,7 +2006,7 @@ const BEYBLADES_DB = [
     },
 
     { 
-        id: "UX-11 & Hasbro Drop Attack", 
+        id: "UX-11 & Hasbro Drop Attack G0842-02", 
         linea: "UX", 
         nombre: "ImpactDrake 9-60LR", 
         blade: "ImpactDrake", 
@@ -2262,7 +2413,7 @@ const BEYBLADES_DB = [
    // HASBRO UX
 
         { 
-        id: "Hasbro Beyblade X Basic/Unique Line Starter Packs 1", 
+        id: "Hasbro Beyblade X Starter G1751", 
         linea: "UX", 
         nombre: "DranBuster 5-70DB", 
         blade: "DranBuster", 
@@ -2296,7 +2447,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/FB-2.png" 
     },
     { 
-        id: "Hasbro Beyblade X Infinity Starter Packs 2", 
+        id: "Hasbro Beyblade X Infinity Starter G2759-01", 
         linea: "UX", 
         nombre: "Shatter Horus 9-65GB", 
         blade: "ShatterHorus", 
@@ -2304,8 +2455,12 @@ const BEYBLADES_DB = [
         bit: "GB",
         imgBlade: "imagenes/blades/UX/horus.png", 
         imgRatchet: "imagenes/ratchet/9-65-crab.png", 
-        imgBit: "imagenes/bits/GB-1.png" 
+        imgBit: "imagenes/bits/S-5.png" 
     },
+
+
+
+
     
        { 
         id: "Hasbro - Circle Ghost and Hack Viking Dual Pack", 
@@ -2344,8 +2499,21 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/S-3.png" 
     },
 
+        { 
+        id: "Hasbro Beyblade X Infinity Starter G2759-02", 
+        linea: "UX", 
+        nombre: "LeonCrest 4-55A", 
+        blade: "LeonCrest", 
+        ratchet: "4-55", 
+        bit: "A",
+        imgBlade: "imagenes/blades/CX/cx05-04.png", 
+        imgRatchet: "imagenes/ratchet/4-55-leoncrest.png", 
+        imgBit: "imagenes/bits/A-10.png" 
+    },
+
+
        { 
-        id: "Hasbro - Drop Attack Stadium", 
+        id: "Hasbro - Drop Attack Stadium G0842-01", 
         linea: "UX", 
         nombre: "Hover Wyvern 3-85N", 
         blade: "HoverWyvern", 
@@ -2354,6 +2522,18 @@ const BEYBLADES_DB = [
         imgBlade: "imagenes/blades/UX/wyvern.png", 
         imgRatchet: "imagenes/ratchet/3-85-ux10.png", 
         imgBit: "imagenes/bits/N-9.png" 
+    },
+
+          { 
+        id: "Hasbro Booster G1670", 
+        linea: "UX", 
+        nombre: "DranDagger 4-70Q", 
+        blade: "DranDagger", 
+        ratchet: "4-70", 
+        bit: "Q",
+        imgBlade: "imagenes/blades/bx-31-04.png", 
+        imgRatchet: "imagenes/ratchet/4-70-dagger.png", 
+        imgBit: "imagenes/bits/Q-6.png" 
     },
 
 ////////////////////////ULTIMOS UX////////////////////////////////////7
@@ -2457,6 +2637,8 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/DS-2.png" 
     },
 
+
+
        { 
         id: "CX-17 03", 
         linea: "UX", 
@@ -2524,7 +2706,7 @@ const BEYBLADES_DB = [
     // LINEA CUSTOM LINE (CX)
     // ==========================================
     { 
-        id: "CX-01 & Hasbro Starter Pack", 
+        id: "CX-01 & Hasbro Starter G1677", 
         linea: "CX", 
         nombre: "DranBrave S 6-60V", 
         blade: "DranBrave", 
@@ -2539,7 +2721,7 @@ const BEYBLADES_DB = [
 
 
 { 
-        id: "CX-02 & Hasbro Starter Pack", 
+        id: "CX-02 & Hasbro Starter G1679", 
         linea: "CX", 
         nombre: "WizardArc R 4-55LO", 
         blade: "WizardArc", 
@@ -2554,7 +2736,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "CX-03 & Hasbro Starter Pack", 
+        id: "CX-03 & Hasbro Starter G1680", 
         linea: "CX", 
         nombre: "PerseusDark B 6-80W", 
         blade: "PerseusDark", 
@@ -2636,7 +2818,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "CX-05 Random Booster Vol. 6 01 & Hasbro Starter Pack", 
+        id: "CX-05 Random Booster Vol. 6 01 & Hasbro Starter G1678", 
         linea: "CX", 
         nombre: "HellsReaper T 4-70K (Prize)", 
         blade: "HellsReaper", 
