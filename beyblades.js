@@ -244,7 +244,7 @@ const BEYBLADES_DB = [
 },
 
 { 
-    id: "BX-16 - Random Booster Select 01 & Hasbro Dual Pack", 
+    id: "BX-16 - Random Booster Select 01 & Hasbro Dual Pack G0197-01", 
     linea: "BX", 
     nombre: "ViperTail 5-80O", 
     blade: "ViperTail", 
@@ -888,6 +888,30 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/T-10.png" 
     },
 
+            { 
+        id: "Hasbro Limited Released Remakes BX-01-1", 
+        linea: "BX", 
+        nombre: "DranzerSpiral 3-80T Green", 
+        blade: "DranzerSpiral", 
+        ratchet: "3-80", 
+        bit: "T",
+        imgBlade: "imagenes/blades/bx-01dranzer3.png", 
+        imgRatchet: "imagenes/ratchet/3-80-dranzerverde.png", 
+        imgBit: "imagenes/bits/T-14.png" 
+    },
+
+                { 
+        id: "Hasbro Limited Released Remakes BX-01-2", 
+        linea: "BX", 
+        nombre: "DranzerSpiral 3-80T Orange", 
+        blade: "DranzerSpiral", 
+        ratchet: "3-80", 
+        bit: "T",
+        imgBlade: "imagenes/blades/bx-01dranzer4.png", 
+        imgRatchet: "imagenes/ratchet/3-80-dranzernaranja.png", 
+        imgBit: "imagenes/bits/T-15.png" 
+    },
+
  { 
         id: "BX00 Starter Set 01", 
         linea: "BX", 
@@ -1527,7 +1551,31 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GU-2.png" 
     },
 
+///// COLABORACION STAR WARS////////
 
+    { 
+        id: "Hasbro Star Wars Mandalorian vs Moff Gideon F9589-01", 
+        linea: "BX", 
+        nombre: "Mandalorian 3-60F", 
+        blade: "Mandalorian", 
+        ratchet: "3-60", 
+        bit: "F",
+        imgBlade: "imagenes/blades/mandalorian.png", 
+        imgRatchet: "imagenes/ratchet/3-60-mando.png", 
+        imgBit: "imagenes/bits/F-15.png" 
+    },
+
+        { 
+        id: "Hasbro Star Wars Mandalorian vs Moff Gideon F9589-02", 
+        linea: "BX", 
+        nombre: "MoffGideon 3-80N", 
+        blade: "MoffGideon", 
+        ratchet: "3-80", 
+        bit: "N",
+        imgBlade: "imagenes/blades/moff.png", 
+        imgRatchet: "imagenes/ratchet/3-80-moff.png", 
+        imgBit: "imagenes/bits/N-10.png" 
+    },
     
 /////////////////////////////////// FIN BX////////////////////////////////////////
 
