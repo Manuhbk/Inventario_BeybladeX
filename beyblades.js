@@ -1019,8 +1019,8 @@ const BEYBLADES_DB = [
         ratchet: "n/a", 
         bit: "n/a",
         imgBlade: "imagenes/blades/bx00-feather.png", 
-        imgRatchet: "imagenes/na.png", 
-        imgBit: "imagenes/na.png" 
+        imgRatchet: "imagenes/NA.png", 
+        imgBit: "imagenes/NA.png" 
     },
 
     { 
@@ -1031,8 +1031,8 @@ const BEYBLADES_DB = [
         ratchet: "n/a", 
         bit: "n/a",
         imgBlade: "imagenes/blades/bx-00dran.png", 
-        imgRatchet: "imagenes/na.png", 
-        imgBit: "imagenes/na.png" 
+        imgRatchet: "imagenes/NA.png", 
+        imgBit: "imagenes/NA.png" 
     },
 
         { 
@@ -1043,8 +1043,8 @@ const BEYBLADES_DB = [
         ratchet: "n/a", 
         bit: "n/a",
         imgBlade: "imagenes/blades/bx-00dranred.png", 
-        imgRatchet: "imagenes/na.png", 
-        imgBit: "imagenes/na.png" 
+        imgRatchet: "imagenes/NA.png", 
+        imgBit: "imagenes/NA.png" 
     },
 
         { 
@@ -1565,6 +1565,19 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/GU-2.png" 
     },
 
+
+        { 
+        id: "BX-52", 
+        linea: "BX", 
+        nombre: "Luster Dragoon 6-60LC", 
+        blade: "LusterDragoon", 
+        ratchet: "6-60", 
+        bit: "LC",
+        imgBlade: "imagenes/blades/luster.png", 
+        imgRatchet: "imagenes/ratchet/6-60-3.png", 
+        imgBit: "imagenes/bits/LC-1.png" 
+    },
+
 ///// COLABORACION STAR WARS - MARVEL - TRANSFORMERS////////
 
     { 
@@ -1737,6 +1750,30 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/R-4.png" 
     },
 
+        { 
+        id: "Hasbro Marvel MilesMorales vs GreenGoblin G1691-01", 
+        linea: "BX", 
+        nombre: "MilesMorales 1-60GN", 
+        blade: "MilesMorales", 
+        ratchet: "1-60", 
+        bit: "GN",
+        imgBlade: "imagenes/blades/colab/miles.png", 
+        imgRatchet: "imagenes/ratchet/1-60-miles.png", 
+        imgBit: "imagenes/bits/GN-4.png" 
+    },
+
+
+            { 
+        id: "Hasbro Marvel MilesMorales vs GreenGoblin G1691-02", 
+        linea: "BX", 
+        nombre: "GreenGoblin 9-80HT", 
+        blade: "GreenGoblin", 
+        ratchet: "9-80", 
+        bit: "HT",
+        imgBlade: "imagenes/blades/colab/duendeverde.png", 
+        imgRatchet: "imagenes/ratchet/9-80-duende.png", 
+        imgBit: "imagenes/bits/HT-4.png" 
+    },
 
 
 
@@ -2578,7 +2615,7 @@ const BEYBLADES_DB = [
 
 
     { 
-        id: "UX-00 01", 
+        id: "UX-00 01 & Hasbro Starter G4568",
         linea: "UX", 
         nombre: "Glory Valkirie LF", 
         blade: "GloryValkirie", 
@@ -2587,6 +2624,18 @@ const BEYBLADES_DB = [
         imgBlade: "imagenes/blades/glory.png", 
         imgRatchet: "imagenes/UXI.png", 
         imgBit: "imagenes/bits/LF-10.png" 
+    },
+
+        { 
+        id: "BXG-63 B4 Limited Edition",
+        linea: "UX", 
+        nombre: "Glory Valkirie LF Metal Coat Blue", 
+        blade: "GloryValkirie", 
+        ratchet: "n-a", 
+        bit: "LF",
+        imgBlade: "imagenes/blades/glory-2.png", 
+        imgRatchet: "imagenes/UXI.png", 
+        imgBit: "imagenes/bits/LF-12.png" 
     },
 
     // ==========================================
@@ -3571,6 +3620,79 @@ const BEYBLADES_DB = [
     imgRatchet: "imagenes/ratchet/7-55-g2750.png", 
     imgBit: "imagenes/bits/T-12.png" 
 },
+
+{ 
+    id: "CXI-19-01 Random Booster Select CrocoTread & Hasbro Starter Infinite G-4565", 
+    linea: "CXI", 
+    nombre: "Croco Tread TQ 5-50GN", 
+    lockChip: "Croco", 
+    overBlade: "Tough", 
+    metalBlade: "Tread", 
+    assistBlade: "Quell", 
+    ratchet: "5-50", 
+    bit: "GN", 
+    imgLockChip: "imagenes/lockchip/croco.png", 
+    imgOverBlade: "imagenes/overblade/t.png", 
+    imgMetalBlade: "imagenes/metalblade/tread.png", 
+    imgAssist: "imagenes/assist/Q-1.png", 
+    imgRatchet: "imagenes/ratchet/5-50-croco.png", 
+    imgBit: "imagenes/bits/GN-5.png" 
+},
+
+{ 
+    id: "CXI-19-02 Random Booster Select CrocoTread", 
+    linea: "CXI", 
+    nombre: "Croco Tread TQ 5-50GN", 
+    lockChip: "Croco", 
+    overBlade: "Tough", 
+    metalBlade: "Tread", 
+    assistBlade: "Quell", 
+    ratchet: "5-50", 
+    bit: "GN", 
+    imgLockChip: "imagenes/lockchip/croco-2.png", 
+    imgOverBlade: "imagenes/overblade/t2.png", 
+    imgMetalBlade: "imagenes/metalblade/tread-2.png", 
+    imgAssist: "imagenes/assist/Q-2.png", 
+    imgRatchet: "imagenes/ratchet/5-50-croco2.png", 
+    imgBit: "imagenes/bits/GN-6.png" 
+},
+
+{ 
+    id: "CXI-19-03 Random Booster Select CrocoTread", 
+    linea: "CXI", 
+    nombre: "Croco Tread TQ 5-50GN", 
+    lockChip: "Croco", 
+    overBlade: "Tough", 
+    metalBlade: "Tread", 
+    assistBlade: "Quell", 
+    ratchet: "5-50", 
+    bit: "GN", 
+    imgLockChip: "imagenes/lockchip/croco-3.png", 
+    imgOverBlade: "imagenes/overblade/t3.png", 
+    imgMetalBlade: "imagenes/metalblade/tread-3.png", 
+    imgAssist: "imagenes/assist/Q-3.png", 
+    imgRatchet: "imagenes/ratchet/5-50-croco3.png", 
+    imgBit: "imagenes/bits/GN-7.png" 
+},
+
+{ 
+    id: "BXG-70 Masked Rider Colaboration", 
+    linea: "CXI", 
+    nombre: "TigaRage FT 3-60T", 
+    lockChip: "Tiga", 
+    overBlade: "Flow", 
+    metalBlade: "Rage", 
+    assistBlade: "Turn", 
+    ratchet: "3-60", 
+    bit: "T", 
+    imgLockChip: "imagenes/lockchip/Tiga.png", 
+    imgOverBlade: "imagenes/overblade/Flow-2.png", 
+    imgMetalBlade: "imagenes/metalblade/Rage-2.png", 
+    imgAssist: "imagenes/assist/T-6.png", 
+    imgRatchet: "imagenes/ratchet/3-60-tiga.png", 
+    imgBit: "imagenes/bits/T-7.png" 
+},
+
    
  
 
