@@ -2145,7 +2145,7 @@ const BEYBLADES_DB = [
     },
 
 { 
-        id: "UX-15 Shark Scale Deck Set", 
+        id: "UX-15 Shark Scale Deck Set 01 y Hasbro Booster Pack", 
         linea: "UX", 
         nombre: "SharkScale 4-50UF", 
         blade: "SharkScale", 
@@ -2156,7 +2156,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/UF-1.png" 
     },
     { 
-        id: "UX-15 Shark Scale Deck Set", 
+        id: "UX-15 Shark Scale Deck Set 02", 
         linea: "BX", 
         nombre: "TyrannoRoar 1-70L", 
         blade: "TyrannoRoar", 
@@ -2825,7 +2825,7 @@ const BEYBLADES_DB = [
     },
 
             { 
-        id: "UX-15 Shark Scale Deck Set", 
+        id: "UX-15 Shark Scale Deck Set 03", 
         linea: "CX", 
         nombre: "HellsBrave 3-60GF", 
         blade: "HellsBrave", 
