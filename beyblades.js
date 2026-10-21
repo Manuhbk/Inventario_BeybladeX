@@ -3114,7 +3114,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/DB-8.png" 
     },
     { 
-        id: "CX-11 Emperor Might Set", 
+        id: "CX-11 Emperor Might Set 01", 
         linea: "CX", 
         nombre: "EmperorMight HOp (Metal Coat: Black)", 
         blade: "EmperorMight", 
@@ -3127,7 +3127,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/Op-1.png" 
     },
     { 
-        id: "CX-11 Emperor Might Set", 
+        id: "CX-11 Emperor Might Set 02", 
         linea: "UX", 
         nombre: "GolemRock M-85HN (Metal Coat: Green)", 
         blade: "GolemRockGreen", 
@@ -3138,7 +3138,7 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/HN-5.png" 
     },
     { 
-        id: "CX-11 Emperor Might Set", 
+        id: "CX-11 Emperor Might Set 03", 
         linea: "BX", 
         nombre: "SharkGill 5-60FB", 
         blade: "SharkGill", 
