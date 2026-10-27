@@ -1775,6 +1775,31 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/HT-4.png" 
     },
 
+            { 
+        id: "BX-53 All In One Set 01", 
+        linea: "BX", 
+        nombre: "WizardArrow 4-80B version 2", 
+        blade: "WizardArrow", 
+        ratchet: "4-80", 
+        bit: "B",
+        imgBlade: "imagenes/blades/arrow2.png", 
+        imgRatchet: "imagenes/ratchet/4-80-amarilla.png", 
+        imgBit: "imagenes/bits/B-1.png"
+    },
+
+                { 
+        id: "BX-53 All In One Set 02", 
+        linea: "BX", 
+        nombre: "KnightShield 3-80N version 2", 
+        blade: "KnightShield", 
+        ratchet: "3-80", 
+        bit: "N",
+        imgBlade: "imagenes/blades/kni.png", 
+        imgRatchet: "imagenes/ratchet/3-80-verde.png", 
+        imgBit: "imagenes/bits/N-1.png" 
+    },
+
+
 
 
 /////////////////////////////////// FIN BX////////////////////////////////////////
@@ -2748,7 +2773,17 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/B-9.png" 
     },
     
- 
+         { 
+        id: "BX-53 All In One Set 03", 
+        linea: "UX", 
+        nombre: "Aero Pegasus 3-70A Blue Cyan", 
+        blade: "AeroPegasus", 
+        ratchet: "3-70", 
+        bit: "A",
+        imgBlade: "imagenes/blades/UX/aerocyan.png", 
+        imgRatchet: "imagenes/ratchet/3-70-bx53.png", 
+        imgBit: "imagenes/bits/A-10.png" 
+    },
     ///////////////////////////////////FIN UX/////////////////////////////////////
 
     //==========================================
