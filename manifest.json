@@ -1,0 +1,16 @@
+{
+  "short_name": "Beyblade X",
+  "name": "Beyblade X inventario - By ManuHBK",
+  "icons": [
+    {
+      "src": "LOGO.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#060b13",
+  "theme_color": "#060b13",
+  "display": "standalone"
+}
