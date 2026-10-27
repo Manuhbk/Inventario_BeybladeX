@@ -1799,6 +1799,18 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/N-1.png" 
     },
 
+                    { 
+        id: "BX-54 & Hasbro Starter Pack G2745", 
+        linea: "BX", 
+        nombre: "SuppressSuperion 0-70 LP", 
+        blade: "SuppressSuperion", 
+        ratchet: "0-70", 
+        bit: "LP",
+        imgBlade: "imagenes/blades/suppress.png", 
+        imgRatchet: "imagenes/ratchet/0-70-superion.png", 
+        imgBit: "imagenes/bits/LP-1.png" 
+    },
+
 
 
 
@@ -2508,6 +2520,9 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/UXI.png", 
         imgBit: "imagenes/bits/FB-2.png" 
     },
+
+   
+    
     { 
         id: "Hasbro Beyblade X Infinity Starter G2759-01", 
         linea: "UX", 
@@ -2623,6 +2638,30 @@ const BEYBLADES_DB = [
         imgBlade: "imagenes/blades/UX/wyvern-last.png", 
         imgRatchet: "imagenes/ratchet/2-80-ux00-1.png", 
         imgBit: "imagenes/bits/GN-3.png" 
+    },
+
+               { 
+        id: "UX-00 DMM Kuji Premio A 2", 
+        linea: "UX", 
+        nombre: "Valor Bison DB", 
+        blade: "ValorBison", 
+        ratchet: "n-a", 
+        bit: "GN",
+        imgBlade: "imagenes/blades/UX/valorpremio.png", 
+        imgRatchet: "imagenes/UXI.png",
+        imgBit: "imagenes/bits/DB-10.png" 
+    },
+
+           { 
+        id: "UX-00 DMM Kuji Last Chance 2", 
+        linea: "UX", 
+        nombre: "Valor Bison DB Metal Coat White", 
+        blade: "ValorBison", 
+        ratchet: "n-a", 
+        bit: "GN",
+        imgBlade: "imagenes/blades/UX/valorwhite.png", 
+        imgRatchet: "imagenes/UXI.png",
+        imgBit: "imagenes/bits/DB-9.png" 
     },
 
 
@@ -2782,8 +2821,35 @@ const BEYBLADES_DB = [
         bit: "A",
         imgBlade: "imagenes/blades/UX/aerocyan.png", 
         imgRatchet: "imagenes/ratchet/3-70-bx53.png", 
-        imgBit: "imagenes/bits/A-10.png" 
+        imgBit: "imagenes/bits/A-11.png" 
     },
+
+         { 
+        id: "CX-20-02 Phoenix Force Set", 
+        linea: "UX", 
+        nombre: "SharkScale 1-70LR", 
+        blade: "SharkScale", 
+        ratchet: "1-70", 
+        bit: "LR",
+        imgBlade: "imagenes/blades/UX/cx-20-02.png", 
+        imgRatchet: "imagenes/ratchet/1-70-cx-20-02.png", 
+        imgBit: "imagenes/bits/LR-4.png" 
+    },
+
+             { 
+        id: "CX-20-03 Phoenix Force Set", 
+        linea: "UX", 
+        nombre: "WizardRod 8-80K", 
+        blade: "WizardRod", 
+        ratchet: "8-80", 
+        bit: "K",
+        imgBlade: "imagenes/blades/UX/wizardazul.png", 
+        imgRatchet: "imagenes/ratchet/8-80-cx-20.png", 
+        imgBit: "imagenes/bits/K-6.png" 
+    },
+
+
+
     ///////////////////////////////////FIN UX/////////////////////////////////////
 
     //==========================================
@@ -3298,7 +3364,7 @@ const BEYBLADES_DB = [
         id: "CX-00 01", 
         linea: "CX", 
         nombre: "ValkyrieVolt S 4-70V (Metal Coat: Gold)", 
-        blade: "ValkyrieVoltGold", 
+        blade: "ValkyrieVolt", 
         assistBlade: "S", 
         ratchet: "4-70", 
         bit: "V",
@@ -3307,6 +3373,23 @@ const BEYBLADES_DB = [
         imgRatchet: "imagenes/ratchet/4-70-cx00-01.png", 
         imgBit: "imagenes/bits/V-4.png" 
     },
+
+
+        { 
+        id: "CX-20-04 Phoenix Force Set", 
+        linea: "CX", 
+        nombre: "ValkyrieVolt S 4-70V Gunmetal Version", 
+        blade: "ValkyrieVolt", 
+        assistBlade: "S", 
+        ratchet: "4-70", 
+        bit: "V",
+        imgBlade: "imagenes/blades/CX/valkirie2.png", 
+        imgAssist: "imagenes/assist/S-4.png", 
+        imgRatchet: "imagenes/ratchet/4-70-valk.png", 
+        imgBit: "imagenes/bits/V-7.png" 
+    },
+
+
     { 
         id: "Beyblade X: Evobattle (Nintendo Switch Package Edition)", 
         linea: "CX", 
@@ -3729,7 +3812,23 @@ const BEYBLADES_DB = [
 },
 
    
- 
+ { 
+    id: "CX-20-01 Phoenix Force Set", 
+    linea: "CXI", 
+    nombre: "Phoenix Force WH M-65MT", 
+    lockChip: "Phoenix", 
+    overBlade: "Weight", 
+    metalBlade: "Force", 
+    assistBlade: "Heavy", 
+    ratchet: "M-65", 
+    bit: "MT", 
+    imgLockChip: "imagenes/lockchip/phoenix.png", 
+    imgOverBlade: "imagenes/overblade/Weight.png", 
+    imgMetalBlade: "imagenes/metalblade/Force.png", 
+    imgAssist: "imagenes/assist/H-2.png", 
+    imgRatchet: "imagenes/ratchet/M-65.png", 
+    imgBit: "imagenes/bits/MT-1.png" 
+},
 
 
     ];
