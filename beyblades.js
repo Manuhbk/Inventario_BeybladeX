@@ -1739,7 +1739,7 @@ const BEYBLADES_DB = [
     },
 
        { 
-        id: "Hasbro Transformers OptimusPrime vs Bumblebee G3797-01", 
+        id: "Hasbro Transformers OptimusPrime vs Bumblebee G3797-02", 
         linea: "BX", 
         nombre: "OptimusPrime 7-70L", 
         blade: "OptimusPrime", 
