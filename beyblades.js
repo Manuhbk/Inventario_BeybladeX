@@ -1727,6 +1727,30 @@ const BEYBLADES_DB = [
     },
 
         { 
+        id: "Hasbro Transformers OptimusPrime vs Bumblebee G3797-01", 
+        linea: "BX", 
+        nombre: "Bumblebee 1-60W", 
+        blade: "Bumblebee", 
+        ratchet: "1-60", 
+        bit: "W",
+        imgBlade: "imagenes/blades/colab/bumblebee.png", 
+        imgRatchet: "imagenes/ratchet/1-60-bumblebee.png", 
+        imgBit: "imagenes/bits/W-5.png" 
+    },
+
+       { 
+        id: "Hasbro Transformers OptimusPrime vs Bumblebee G3797-01", 
+        linea: "BX", 
+        nombre: "OptimusPrime 7-70L", 
+        blade: "OptimusPrime", 
+        ratchet: "7-70", 
+        bit: "L",
+        imgBlade: "imagenes/blades/colab/optimusprime.png", 
+        imgRatchet: "imagenes/ratchet/7-70-optimus.png", 
+        imgBit: "imagenes/bits/L-5.png" 
+    },
+
+        { 
         id: "Hasbro Marvel CaptainAmerica vs RedHulk G1690-01", 
         linea: "BX", 
         nombre: "CaptainAmerica 4-70GB", 
@@ -3528,6 +3552,33 @@ const BEYBLADES_DB = [
         imgBit: "imagenes/bits/T-13.png" 
     },
 
+            { 
+        id: "CX-00 Hasbro NFL Colaboration G3607-01", 
+        linea: "CX", 
+        nombre: "AFC Courage S 6-70H", 
+        blade: "AFCCourage", 
+        assistBlade: "S", 
+        ratchet: "6-70", 
+        bit: "H",
+        imgBlade: "imagenes/blades/CX/afccourage.png", 
+        imgAssist: "imagenes/assist/S-8.png", 
+        imgRatchet: "imagenes/ratchet/6-70-nfl.png", 
+        imgBit: "imagenes/bits/H-6.png" 
+    },
+
+                { 
+        id: "CX-00 Hasbro NFL Colaboration G3607-02", 
+        linea: "CX", 
+        nombre: "NFC Arc R 9-60LO", 
+        blade: "NFC Arc", 
+        assistBlade: "R", 
+        ratchet: "9-60", 
+        bit: "LO",
+        imgBlade: "imagenes/blades/CX/nfcarc.png", 
+        imgAssist: "imagenes/assist/R-3.png", 
+        imgRatchet: "imagenes/ratchet/9-60-nfl.png", 
+        imgBit: "imagenes/bits/LO-4.png" 
+    },
 
 
 
